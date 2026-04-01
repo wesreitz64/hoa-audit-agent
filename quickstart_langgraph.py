@@ -23,7 +23,6 @@ from typing import Literal
 from typing_extensions import TypedDict, Annotated
 from dotenv import load_dotenv
 
-from langchain_openai import ChatOpenAI
 from langchain_core.tools import tool
 from langchain_core.messages import (
     AnyMessage,
@@ -34,18 +33,30 @@ from langchain_core.messages import (
 from langgraph.graph import StateGraph, START, END
 
 # ──────────────────────────────────────────────────────────────────────
-# Setup
+# Setup — Auto-detect LLM provider from available API keys
 # ──────────────────────────────────────────────────────────────────────
 
 load_dotenv()
 
-# Verify API key is set
-if not os.getenv("OPENAI_API_KEY"):
-    print("❌ ERROR: OPENAI_API_KEY not set in .env file")
-    print("   Copy .env.example to .env and add your key")
-    exit(1)
 
-model = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+def get_model():
+    """Auto-detect which LLM provider to use based on available API keys."""
+    if os.getenv("ANTHROPIC_API_KEY"):
+        from langchain_anthropic import ChatAnthropic
+        print("🤖 Using Claude (Anthropic)")
+        return ChatAnthropic(model="claude-sonnet-4-20250514", temperature=0)
+    elif os.getenv("OPENAI_API_KEY"):
+        from langchain_openai import ChatOpenAI
+        print("🤖 Using GPT-4o-mini (OpenAI)")
+        return ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    else:
+        print("❌ ERROR: No API key found in .env file")
+        print("   Set one of: ANTHROPIC_API_KEY, OPENAI_API_KEY")
+        print("   Copy .env.example to .env and add your key")
+        exit(1)
+
+
+model = get_model()
 
 
 # ──────────────────────────────────────────────────────────────────────
