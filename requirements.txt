@@ -1,0 +1,17 @@
+# Core AI Framework
+langgraph>=1.1.4
+langchain>=1.2.0
+langchain-openai>=1.1.0
+
+# Type Safety & Validation
+pydantic>=2.12.0
+
+# PDF Extraction (Phase 2)
+# llama-parse>=0.6.0
+# pypdf>=5.0.0
+
+# Environment
+python-dotenv>=1.1.0
+
+# Dev/Testing
+# pydantic-evals  # Phase 3
