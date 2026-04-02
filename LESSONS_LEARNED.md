@@ -302,4 +302,74 @@ Page 14:                          Page 15:
 
 ---
 
-*More lessons coming as we build Nodes 2c-2d and the Auditor...*
+## 13. SQL Beats RAG for Financial Data — Don't Vector-Search Numbers
+
+When we needed to answer questions like "How much did we spend on electricity?" there were two paths:
+
+| Approach | How it works | Good for | Bad for |
+|---|---|---|---|
+| **RAG (vector search)** | Embed chunks → similarity search → LLM reads matches | Unstructured text, narrative documents | Precise numeric aggregation |
+| **SQL (structured query)** | Load clean data → LLM writes SQL → execute → format | Numbers, dates, totals, comparisons | Free-form prose |
+
+**We chose SQL**, and here's why:
+
+```
+RAG approach:  "How much on electricity?"
+  → Embeds question → Finds chunks mentioning "electric"
+  → LLM reads 3 text chunks → Guesses "$67.43" (maybe)
+  → No way to verify, no audit trail
+
+SQL approach:  "How much on electricity?"
+  → LLM writes: SELECT SUM(amount) FROM invoices WHERE gl_account_name = 'Electricity'
+  → SQLite returns: 67.43 (exact, deterministic)
+  → You can see the query, re-run it, audit it
+```
+
+**The key insight:** Once you've extracted structured data (amounts, dates, vendor names, GL codes), that data is **already tabular**. Shoving it into a vector database and doing similarity search is like putting a spreadsheet through a blender and then asking someone to read the smoothie.
+
+**The architecture we built:**
+```
+Extracted JSON → SQLite database (with indexes, generated columns)
+                     ↓
+User question → LLM generates SQL → Execute → LLM formats answer
+                     ↓
+"Granite Landscape was paid $4,979.50 — 59% of total spending"
+(with invoice numbers, dates, and source citations)
+```
+
+**Bonus — the SQL agent self-corrects:** If the generated SQL has a syntax error, we catch it, send the error back to the LLM, and let it fix the query. Two-shot SQL generation covers 99% of questions.
+
+**When to use RAG instead:**
+- Meeting minutes ("What did the board discuss about the pool?")
+- Contracts and legal documents ("What are the landscaping contract terms?")
+- Any document where meaning lives in paragraphs, not numbers
+
+**One-liner:** *"If your data has columns, use SQL. If your data has paragraphs, use RAG. Financial data has columns — stop vector-searching your spreadsheets."*
+
+---
+
+## 14. Generated Columns and Indexes — Let the Database Do the Work
+
+When designing the SQLite schema, we added generated columns:
+
+```sql
+CREATE TABLE bank_transactions (
+    transaction_date TEXT NOT NULL,    -- '2026-02-15'
+    -- Auto-derived for grouping queries:
+    month TEXT GENERATED ALWAYS AS (substr(transaction_date, 1, 7)) STORED,  -- '2026-02'
+    year  TEXT GENERATED ALWAYS AS (substr(transaction_date, 1, 4)) STORED   -- '2026'
+);
+```
+
+**Why this matters for the AI query agent:**
+- The LLM can write `GROUP BY month` instead of `GROUP BY substr(transaction_date, 1, 7)`
+- Simpler SQL = fewer syntax errors = fewer retry calls = lower token cost
+- Indexes on `month` make aggregation queries instant even with thousands of rows
+
+**The broader pattern:** When building a database that an LLM will query, **optimize for LLM ergonomics** — descriptive column names, pre-computed groupings, and lookup tables. The easier you make it for the LLM to write correct SQL, the fewer tokens you burn on retries.
+
+**One-liner:** *"Design your schema for your dumbest user — because that user is an LLM writing SQL."*
+
+---
+
+*More lessons coming as we build the Reconciliation Engine and Audit Report Generator...*

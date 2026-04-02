@@ -26,6 +26,9 @@ Thumbs.db
 
 # Data files (don't commit sensitive HOA documents)
 data/sample_pdfs/*.pdf
+data/*.db
+data/query_test.txt
+data/query_results.txt
 
 # LangSmith traces
 .langsmith/
