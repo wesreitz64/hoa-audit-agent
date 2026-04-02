@@ -1,0 +1,320 @@
+[
+  {
+    "page_number": 1,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Cover page for Financial Report Package for Briarwyck Owners Association, Inc. dated February 2026, prepared by PMI Cross Timbers with CINCSystems copyright notice"
+  },
+  {
+    "page_number": 2,
+    "page_type": "balance_sheet",
+    "confidence": 0.98,
+    "summary": "Balance sheet for Briarwyck Owners Association showing assets, liabilities, and equity with operating and reserve fund breakdowns as of 02/28/2026"
+  },
+  {
+    "page_number": 3,
+    "page_type": "bank_account_list",
+    "confidence": 0.95,
+    "summary": "Bank account list for Briarwyck Owners Association showing two SouthState Bank accounts (Operating and Reserve) with balances totaling $127,104.83 as of 2/28/2026"
+  },
+  {
+    "page_number": 4,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Income Statement - Operating for Briarwyck Owners Association, Inc. covering February 2026, showing operating income from assessments and other sources, plus operating expenses including administrative costs"
+  },
+  {
+    "page_number": 5,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Operating income statement for Briarwyck Owners Association showing building maintenance/repair expenses, reserve contributions, and net income for February 2026 with budget comparisons"
+  },
+  {
+    "page_number": 6,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Reserve Income Statement for Briarwyck Owners Association showing reserve income and expenses for February 2026, including bank interest, reserve contributions, and reserve expenses for common area and landscaping improvements"
+  },
+  {
+    "page_number": 7,
+    "page_type": "invoice_list",
+    "confidence": 0.95,
+    "summary": "Invoice list for Briarwyck Owners Association showing paid invoices from 2/1/2026 - 2/28/2026, including vendors like Ambit Texas (electricity), AmTrust Financial (insurance), City of Carrollton (water/sewer), Five Star Aquatics (lake management), and Granite Landscape (grounds maintenance)"
+  },
+  {
+    "page_number": 8,
+    "page_type": "invoice_list",
+    "confidence": 0.95,
+    "summary": "Invoice list for Briarwyck Owners Association showing paid invoices from 2/1/2026 - 2/28/2026, including management fees, utilities, and administrative expenses with payment details"
+  },
+  {
+    "page_number": 9,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing delinquent accounts with aging buckets (Current, Over 30, Over 60, Over 90) for three homeowners: Jose Enrique Angulo, Stephan Daniels, and Laura Barrett, all in Step 4 collections status"
+  },
+  {
+    "page_number": 10,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing delinquent accounts with aging buckets (Current, Over 30, Over 60, Over 90) and collection status for various homeowners"
+  },
+  {
+    "page_number": 11,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing account balances by aging categories (Current, Over 30, Over 60, Over 90) for multiple homeowners as of 02/28/2026. Most accounts show prepaid balances (negative amounts)."
+  },
+  {
+    "page_number": 12,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing account balances by aging categories (Current, Over 30, Over 60, Over 90) for multiple homeowners as of 02/28/2026. Most accounts show prepaid balances (negative amounts)."
+  },
+  {
+    "page_number": 13,
+    "page_type": "homeowner_aging",
+    "confidence": 0.95,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing aging buckets (Current, Over 30, Over 60, Over 90) with detailed breakdown of assessments, fees, and prepaid amounts by homeowner account"
+  },
+  {
+    "page_number": 14,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement for Briarwyck Owners Association checking account ending 02/27/2026, showing account summary, deposits, and other credits with ending balance of $81,270.27"
+  },
+  {
+    "page_number": 15,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement continuation page showing detailed transaction history for Association Checking account ending in 8763, including other credits, electronic debits, other debits, cleared checks, and daily balances for February 2026"
+  },
+  {
+    "page_number": 16,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement page 3 of 4 for Briarwyck Owners Association checking account ending 02/27/2026, showing transaction numbers and amounts"
+  },
+  {
+    "page_number": 17,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement page 4 of 4 for Briarwyck Owners Association checking account, statement ending 02/27/2026, with intentionally blank content"
+  },
+  {
+    "page_number": 18,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Bank account terms and conditions page with error reporting procedures and billing rights notice from SouthState Bank"
+  },
+  {
+    "page_number": 19,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Intentionally blank page within checking account statements section"
+  },
+  {
+    "page_number": 20,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement for Briarwyck Owners Association Reserve account showing account summary, interest earned, credits, and daily balances for period ending 02/27/2026"
+  },
+  {
+    "page_number": 21,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank statement page 2 of 2 for Briarwyck Owners Association checking account, statement ending 02/27/2026, with note \"This page left intentionally blank\""
+  },
+  {
+    "page_number": 22,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Bank account terms and conditions page with error reporting procedures and billing rights notice"
+  },
+  {
+    "page_number": 23,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Intentionally blank page within checking account statements section"
+  },
+  {
+    "page_number": 24,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank account reconciliation for SouthState Bank Operating account 8763, showing uncleared and cleared items with deposits and payments for Briarwyck Owners Association"
+  },
+  {
+    "page_number": 25,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank account reconciliation for SouthState Bank Operating account 8763, showing transactions, cleared debits totaling $11,957.74, and ending balance of $81,270.27 for February 2026"
+  },
+  {
+    "page_number": 26,
+    "page_type": "bank_statement",
+    "confidence": 0.95,
+    "summary": "Bank account reconciliation for SouthState Bank Reserve account 8766, showing cleared items, credits, and account balance summary for February 2026"
+  },
+  {
+    "page_number": 27,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "City of Carrollton utility bill for POND OWNERS ASSOC water service, account #3004276, billing period 12/15/2025 to 01/14/2026, amount due $97.24"
+  },
+  {
+    "page_number": 28,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Invoice from Magnolia Fisheries for lake management services including pond dye and monthly management fee, totaling $351.96"
+  },
+  {
+    "page_number": 29,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "PMI Cross Timbers invoice #4012 dated 02/02/2026 for monthly management fee of $824.00 to Briarwyck Owners Association"
+  },
+  {
+    "page_number": 30,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Invoice #33766 from Granite Landscape & Maintenance for February landscape maintenance services totaling $4,979.50 including tax"
+  },
+  {
+    "page_number": 31,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Legal services invoice #440 for Briarwyck Owners Association covering 2/1/2026-2/15/2026, showing attorney fees for covenant enforcement policy drafting and client conference totaling $1,087.50"
+  },
+  {
+    "page_number": 32,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Reliant Energy utility invoice for Briarwyck HOA showing $7.59 amount due with bank draft payment scheduled for 02/26/2026"
+  },
+  {
+    "page_number": 33,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Reliant Energy electric utility invoice for Briarwyck HOA, page 2 of 2, showing current charges of $7.59 for billing period 01/09/2026 to 02/09/2026"
+  },
+  {
+    "page_number": 34,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Reliant Energy utility invoice for Briarwyck HOA showing electricity charges of $34.19 with bank draft payment scheduled for 02/26/2026"
+  },
+  {
+    "page_number": 35,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Reliant Energy electric utility invoice for Briarwyck HOA showing detailed usage charges, delivery fees, and taxes for billing period 01/09/2026 to 02/09/2026"
+  },
+  {
+    "page_number": 36,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Ambit Energy utility invoice for Briarwyck Owners Association showing account summary, previous balance of $145.07, current charges of $25.65, and due date of 02/26/2026"
+  },
+  {
+    "page_number": 37,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Utility invoice page 2 of 3 for Briarwyck Owners Association from Ambit Energy, showing account summary with previous balance, payment credit, and zero current balance"
+  },
+  {
+    "page_number": 38,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Electric utility invoice for Briarwyck Owners Association from Ambit Energy showing service period 01/09/2026 to 02/08/2026, usage of 41 kWh, and total charges of $25.65"
+  },
+  {
+    "page_number": 39,
+    "page_type": "insurance_compliance",
+    "confidence": 0.95,
+    "summary": "Insurance policy cancellation notice for Briarwyck Owners Association commercial lines policy due to nonpayment of premium, with total unpaid balance of $1,452.00"
+  },
+  {
+    "page_number": 40,
+    "page_type": "boilerplate",
+    "confidence": 1.0,
+    "summary": "Intentionally blank page"
+  },
+  {
+    "page_number": 41,
+    "page_type": "insurance_compliance",
+    "confidence": 0.95,
+    "summary": "Texas insurance cancellation/nonrenewal/declination notice form - blank template for notifying policyholders of insurance policy changes"
+  },
+  {
+    "page_number": 42,
+    "page_type": "boilerplate",
+    "confidence": 1.0,
+    "summary": "Intentionally blank page"
+  },
+  {
+    "page_number": 43,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "PMI Cross Timbers invoice #4123 dated 02/12/2026 for Briarwyck Owners Association showing administrative fees ($80.00) and reimbursements ($76.50) totaling $156.50"
+  },
+  {
+    "page_number": 44,
+    "page_type": "invoice",
+    "confidence": 0.95,
+    "summary": "Invoice from Neon Monkey Services to Briarwyck Owners Association for tree trimming services, $1,000 monthly payment for March 2026"
+  },
+  {
+    "page_number": 45,
+    "page_type": "general_ledger",
+    "confidence": 0.95,
+    "summary": "General Ledger Trial Balance with Details for Briarwyck Owners Association showing account balances and transaction details for February 2026, including management fees, postage, printing, bank charges, and taxes"
+  },
+  {
+    "page_number": 46,
+    "page_type": "general_ledger",
+    "confidence": 0.95,
+    "summary": "General Ledger Trial Balance with Details for Briarwyck Owners Association showing account balances, debits, credits, and transaction details for February 2026, including reserve accounts and landscaping expenses"
+  },
+  {
+    "page_number": 47,
+    "page_type": "homeowner_ledger",
+    "confidence": 0.95,
+    "summary": "Monthly homeowner ledger showing individual account balances with columns for Previous Balance, Billing, Receipts, Adjustments, PrePaid, and Ending Balance for various homeowners (TPB01-TPB14)"
+  },
+  {
+    "page_number": 48,
+    "page_type": "homeowner_ledger",
+    "confidence": 0.95,
+    "summary": "Receivables Type Balances report showing homeowner account ledger with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for various homeowners (TPB19-TPB31)"
+  },
+  {
+    "page_number": 49,
+    "page_type": "homeowner_ledger",
+    "confidence": 1.0,
+    "summary": "Receivables Type Balances report showing homeowner ledger with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for various homeowners (TPB37-TPB50)"
+  },
+  {
+    "page_number": 50,
+    "page_type": "homeowner_ledger",
+    "confidence": 0.95,
+    "summary": "Receivables Type Balances report showing homeowner account details with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for multiple homeowners (TPB54-TPB62)"
+  },
+  {
+    "page_number": 51,
+    "page_type": "homeowner_ledger",
+    "confidence": 1.0,
+    "summary": "Receivables Type Balances report showing homeowner ledger entries with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for various homeowners (TPB65-TPB80)"
+  },
+  {
+    "page_number": 52,
+    "page_type": "homeowner_ledger",
+    "confidence": 0.95,
+    "summary": "Receivables Type Balances report showing homeowner account ledger with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for various homeowners (TPB86-TPB96)"
+  },
+  {
+    "page_number": 53,
+    "page_type": "homeowner_ledger",
+    "confidence": 0.95,
+    "summary": "Receivables Type Balances report showing assessment totals by type with columns for Prev. Bal, Billing, Receipts, Adjustments, PrePaid, and Ending Bal for February 2026"
+  }
+]

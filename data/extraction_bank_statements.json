@@ -1,0 +1,472 @@
+[
+  {
+    "transaction_date": "2026-02-02",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-04",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-04",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 1389.92,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-04",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 1531.92,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-05",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-05",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 1289.92,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-06",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-06",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 131.44,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-10",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-11",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 1404.92,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-17",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-17",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-17",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 131.44,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-20",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 251.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-24",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 383.16,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-26",
+    "description": "CORP ICL/RDC DEPOSIT",
+    "amount": 102.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-02",
+    "description": "Briarwyck Owners OnlinePay 5585",
+    "amount": 1404.92,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-03",
+    "description": "PAYABLI DEPOSIT TRANSFER 892839071",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-03",
+    "description": "Briarwyck Owners OnlinePay 5601",
+    "amount": 1784.36,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-04",
+    "description": "Briarwyck Owners ASSN DUES 16",
+    "amount": 520.68,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-05",
+    "description": "Briarwyck Owners OnlinePay 5646",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-06",
+    "description": "Briarwyck Owners OnlinePay 5693",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 14
+  },
+  {
+    "transaction_date": "2026-02-11",
+    "description": "Briarwyck Owners OnlinePay 5725",
+    "amount": 255.44,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-12",
+    "description": "PAYABLI DEPOSIT TRANSFER 895472396",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-12",
+    "description": "Briarwyck Owners OnlinePay 5747",
+    "amount": 216.22,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-18",
+    "description": "PAYABLI DEPOSIT TRANSFER 896847152",
+    "amount": 105.44,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-24",
+    "description": "Briarwyck Owners OnlinePay 5860",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-24",
+    "description": "PAYABLI DEPOSIT TRANSFER 898139444",
+    "amount": 127.72,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-24",
+    "description": "PAYABLI DEPOSIT TRANSFER 898021679",
+    "amount": 600.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-26",
+    "description": "Briarwyck Owners OnlinePay 5887",
+    "amount": 124.0,
+    "transaction_type": "credit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-06",
+    "description": "CITYOFCARROLLTON CONS COLL 3004276",
+    "amount": 97.24,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-10",
+    "description": "Briarwyck Owners Vendor Pay 1408",
+    "amount": 824.0,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-11",
+    "description": "Briarwyck Owners Vendor Pay 1425",
+    "amount": 4979.5,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-18",
+    "description": "Briarwyck Owners Vendor Pay 1429",
+    "amount": 156.5,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-20",
+    "description": "AMTRUST NA PAYMENT 41978146",
+    "amount": 1402.0,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-23",
+    "description": "AMBIT ENERGY AMBT_ACH 960007915773",
+    "amount": 25.65,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-26",
+    "description": "Reliant Energy 0121D 000070637839",
+    "amount": 7.59,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-26",
+    "description": "Reliant Energy 0121D 000070637846",
+    "amount": 34.19,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-27",
+    "description": "Briarwyck Owners Vendor Pay 1478",
+    "amount": 351.96,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-11",
+    "description": "TRANSIT CHECK #8098 IN 02.06 DEPOSIT SET REJECTED FOR POOR IMAGE QUALITY",
+    "amount": 124.0,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-11",
+    "description": "TRANSIT CHECK #5110 IN 02.06 DEPOSIT SET REJECTED FOR POOR IMAGE QUALITY",
+    "amount": 131.44,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-17",
+    "description": "CincXfer to 8766",
+    "amount": 279.17,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-04",
+    "description": "Check #1076",
+    "amount": 550.0,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-03",
+    "description": "Check #1077",
+    "amount": 1907.0,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-26",
+    "description": "Check #1080",
+    "amount": 1087.5,
+    "transaction_type": "debit",
+    "account_type": "operating",
+    "account_number_last4": "8763",
+    "running_balance": null,
+    "source_page": 15
+  },
+  {
+    "transaction_date": "2026-02-17",
+    "description": "CincXfer from 8763",
+    "amount": 279.17,
+    "transaction_type": "credit",
+    "account_type": "reserve",
+    "account_number_last4": "8766",
+    "running_balance": null,
+    "source_page": 20
+  },
+  {
+    "transaction_date": "2026-02-27",
+    "description": "INTEREST",
+    "amount": 24.44,
+    "transaction_type": "credit",
+    "account_type": "reserve",
+    "account_number_last4": "8766",
+    "running_balance": null,
+    "source_page": 20
+  }
+]

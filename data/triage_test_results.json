@@ -1,0 +1,62 @@
+[
+  {
+    "page_number": 1,
+    "page_type": "boilerplate",
+    "confidence": 0.95,
+    "summary": "Cover page for Financial Report Package for Briarwyck Owners Association, Inc. dated February 2026, prepared by PMI Cross Timbers with CINCSystems copyright notice"
+  },
+  {
+    "page_number": 2,
+    "page_type": "balance_sheet",
+    "confidence": 0.98,
+    "summary": "Balance sheet for Briarwyck Owners Association showing assets, liabilities, and equity with operating and reserve fund breakdowns as of 02/28/2026"
+  },
+  {
+    "page_number": 3,
+    "page_type": "bank_account_list",
+    "confidence": 0.95,
+    "summary": "Bank account list for Briarwyck Owners Association showing two SouthState Bank accounts (Operating and Reserve) with balances totaling $127,104.83 as of 2/28/2026"
+  },
+  {
+    "page_number": 4,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Income Statement - Operating for Briarwyck Owners Association, Inc. covering February 2026, showing operating income from assessments and other sources, plus operating expenses including administrative costs"
+  },
+  {
+    "page_number": 5,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Operating income statement for Briarwyck Owners Association showing building maintenance/repair expenses, reserve contributions, and net income for February 2026 with budget comparisons"
+  },
+  {
+    "page_number": 6,
+    "page_type": "income_statement",
+    "confidence": 0.95,
+    "summary": "Reserve Income Statement for Briarwyck Owners Association showing reserve income and expenses for February 2026, including bank interest, reserve contributions, and reserve expenses for common area and landscaping improvements"
+  },
+  {
+    "page_number": 7,
+    "page_type": "invoice_list",
+    "confidence": 0.95,
+    "summary": "Invoice list for Briarwyck Owners Association showing paid invoices from 2/1/2026 - 2/28/2026, including vendors like Ambit Texas (electricity), AmTrust Financial (insurance), City of Carrollton (water/sewer), Five Star Aquatics (lake management), and Granite Landscape (grounds maintenance)"
+  },
+  {
+    "page_number": 8,
+    "page_type": "invoice_list",
+    "confidence": 0.95,
+    "summary": "Invoice list for Briarwyck Owners Association showing paid invoices from 2/1/2026 - 2/28/2026, including management fees, utilities, and administrative expenses with payment details"
+  },
+  {
+    "page_number": 9,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing delinquent accounts with aging buckets (Current, Over 30, Over 60, Over 90) for three homeowners: Jose Enrique Angulo, Stephan Daniels, and Laura Barrett, all in Step 4 collections status"
+  },
+  {
+    "page_number": 10,
+    "page_type": "homeowner_aging",
+    "confidence": 1.0,
+    "summary": "Homeowner Aging Report for Briarwyck Owners Association showing delinquent accounts with aging buckets (Current, Over 30, Over 60, Over 90) and collection status for various homeowners"
+  }
+]

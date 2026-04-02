@@ -1,0 +1,12 @@
+======================================================================
+Traceback (most recent call last):
+  File "C:\Users\wesre\source\repos\hoa-audit-agent\evals\eval_triage.py", line 155, in <module>
+    run_eval()
+    ~~~~~~~~^^
+  File "C:\Users\wesre\source\repos\hoa-audit-agent\evals\eval_triage.py", line 80, in run_eval
+    print("\U0001f4ca Node 1 Triage Router ù Eval Results")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4ca' in position 0: character maps to <undefined>

@@ -1,0 +1,42 @@
+{
+  "accuracy": 0.8679245283018868,
+  "correct": 46,
+  "total": 53,
+  "misclassifications": [
+    {
+      "page": 47,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 48,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 49,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 50,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 51,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 52,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    },
+    {
+      "page": 53,
+      "expected": "homeowner_ledger",
+      "predicted": "homeowner_aging"
+    }
+  ]
+}

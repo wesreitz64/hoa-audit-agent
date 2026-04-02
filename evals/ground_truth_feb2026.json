@@ -1,0 +1,267 @@
+[
+  {
+    "page_number": 1,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 2,
+    "ground_truth": "balance_sheet",
+    "notes": "verified"
+  },
+  {
+    "page_number": 3,
+    "ground_truth": "bank_account_list",
+    "notes": "verified"
+  },
+  {
+    "page_number": 4,
+    "ground_truth": "income_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 5,
+    "ground_truth": "income_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 6,
+    "ground_truth": "income_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 7,
+    "ground_truth": "invoice_list",
+    "notes": "verified"
+  },
+  {
+    "page_number": 8,
+    "ground_truth": "invoice_list",
+    "notes": "verified"
+  },
+  {
+    "page_number": 9,
+    "ground_truth": "homeowner_aging",
+    "notes": "verified"
+  },
+  {
+    "page_number": 10,
+    "ground_truth": "homeowner_aging",
+    "notes": "verified"
+  },
+  {
+    "page_number": 11,
+    "ground_truth": "homeowner_aging",
+    "notes": "verified"
+  },
+  {
+    "page_number": 12,
+    "ground_truth": "homeowner_aging",
+    "notes": "verified"
+  },
+  {
+    "page_number": 13,
+    "ground_truth": "homeowner_aging",
+    "notes": "verified"
+  },
+  {
+    "page_number": 14,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 15,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 16,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 17,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 18,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 19,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 20,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 21,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 22,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 23,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 24,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 25,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 26,
+    "ground_truth": "bank_statement",
+    "notes": "verified"
+  },
+  {
+    "page_number": 27,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 28,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 29,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 30,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 31,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 32,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 33,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 34,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 35,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 36,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 37,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 38,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 39,
+    "ground_truth": "insurance_compliance",
+    "notes": "verified"
+  },
+  {
+    "page_number": 40,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 41,
+    "ground_truth": "insurance_compliance",
+    "notes": "verified"
+  },
+  {
+    "page_number": 42,
+    "ground_truth": "boilerplate",
+    "notes": "verified"
+  },
+  {
+    "page_number": 43,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 44,
+    "ground_truth": "invoice",
+    "notes": "verified"
+  },
+  {
+    "page_number": 45,
+    "ground_truth": "general_ledger",
+    "notes": "verified"
+  },
+  {
+    "page_number": 46,
+    "ground_truth": "general_ledger",
+    "notes": "verified"
+  },
+  {
+    "page_number": 47,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 48,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 49,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 50,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 51,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 52,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  },
+  {
+    "page_number": 53,
+    "ground_truth": "homeowner_ledger",
+    "notes": "corrected to homeowner_ledger"
+  }
+]
