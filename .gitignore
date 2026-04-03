@@ -29,6 +29,8 @@ data/sample_pdfs/*.pdf
 data/*.db
 data/query_test.txt
 data/query_results.txt
+data/_debug_*
+data/_verification_*
 
 # LangSmith traces
 .langsmith/
