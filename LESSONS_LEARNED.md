@@ -373,3 +373,94 @@ CREATE TABLE bank_transactions (
 ---
 
 *More lessons coming as we build the Reconciliation Engine and Audit Report Generator...*
+
+---
+
+## 15. PDF Column Order ≠ Visual Column Order — And You Can't Trust Either Alone
+
+PyMuPDF reads text from the PDF's internal structure, not left-to-right like a human reads a printed page. For the CINCSystems Receivables report, the **visual** column order from left to right is:
+
+```
+Prev. Bal | Billing | Receipts | Adjustments | PrePaid | Ending Bal
+```
+
+But PyMuPDF reads the Homeowner Totals values in a completely different order:
+
+```
+pos1 = Prev. Bal     (visually column 1 — matches)
+pos2 = Receipts      (visually column 3 — WRONG if you assume left-to-right)
+pos3 = PrePaid       (visually column 5)
+pos4 = Ending Bal    (visually column 6)
+pos5 = Billing       (visually column 2)
+pos6 = Adjustments   (visually column 4)
+```
+
+**And it gets worse:** The **Association Totals** (the checksum row on the same page) uses a *different* PyMuPDF read order — matching the visual header order instead. So even within the same PDF, different rows of the same table can be read in different column sequences.
+
+**How we proved the mapping:**
+1. Found a homeowner with **unique values in every column** — Rachael Jacobs (TPB41) had 6 different numbers: (-353.28, 142.72, -127.72, -15.00, 3.72, -349.56)
+2. The user (Wes, an HOA board member) read the PDF and identified which value went in which column
+3. Matched each value to its PyMuPDF position → definitive mapping
+4. Cross-verified with Laura Barrett (TPB27) → same mapping held
+5. Confirmed with user-provided screenshots of 5 additional homeowners
+
+**Can we defend this mapping next month?** Yes — because we have a **self-validating formula:**
+
+```
+Ending = Prev + Billing + Receipts + Adjustments + PrePaid
+```
+
+If the column mapping is wrong, this formula will NOT balance for most homeowners. If it balances for 44+ of 52 accounts (the non-PrePaid-carryforward ones), the mapping is correct. This is a **built-in regression test** — no human verification needed. If CINCSystems changes their PDF layout, the formula check will immediately catch it.
+
+**The risk that remains:** If CINCSystems changes the layout such that a *different* wrong mapping also happens to satisfy the formula for most accounts, we'd get wrong data with no alarm. This is astronomically unlikely with 6 columns and 40+ test cases, but it's not mathematically impossible.
+
+**One-liner:** *"Never assume PDF text extraction follows visual layout. Find a row with unique values, have a human read the original, and build a formula that proves it every time."*
+
+---
+
+## 16. CINCSystems PrePaid Carryforward — When the Report Itself Is "Wrong"
+
+Some CINCSystems Homeowner Totals rows don't balance:
+
+```
+Sue Cicherski (TPB80):
+  PrePaid line item:   $0.00 | $0.00 | $0.00 | $0.00 | ($1,277.20) | ($1,277.20)
+  Homeowner Totals:  $127.72 | $127.72 | ($127.72) | ($127.72) | $0.00 | ($1,277.20)
+```
+
+The PrePaid line shows ($1,277.20) but the Totals shows **$0.00** for PrePaid. The ($1,277.20) is absorbed directly into the Ending Balance column without appearing in the PrePaid totals.
+
+**This is a CINCSystems reporting behavior, not a parsing bug.** It affects 8 out of 52 accounts in our February report. For these accounts:
+- The formula `Ending = Prev + Billing + Receipts + Adj + PrePaid` does NOT balance
+- But the Ending Balance itself IS correct (it matches the Association Totals checksum)
+- The PrePaid carryforward amount is a rolling balance from prior periods
+
+**How we handle it:**
+1. During parsing, detect a dollar value between the "PrePaid" label and "Homeowner Totals:" — this trailing value is the carryforward indicator
+2. Flag these accounts as `has_prepaid_carryforward = True`
+3. Don't count them as formula errors in the verification step
+4. Trust the Ending Balance (position 4) as the source of truth
+
+**Can we defend this to a homeowner?** Yes, with this explanation:
+- *"Your ending balance of ($1,277.20) matches what CINCSystems reports. The PrePaid carryforward reflects advance payments you made in prior periods. The individual line items show the detail; the Homeowner Totals row shows the net effect."*
+
+**One-liner:** *"Sometimes the source system's report is misleading on purpose. Document the behavior, detect it automatically, and trust the bottom line."*
+
+---
+
+## 17. 52 ≠ 96 — Not All Reports Show All Homeowners
+
+The Receivables Type Balances report (pages 47-53) only lists the **52 homeowners who had activity** during the period. The other ~44 units with zero balances and no changes are simply omitted.
+
+The full roster of ~96 units appears on the Homeowner Aging Report (pages 9-13), which lists **every** unit regardless of activity.
+
+**Why this matters for reconciliation:**
+- When reconciling bank deposits against homeowner payments, we can only match against the 52 active accounts
+- To verify that ALL homeowners are accounted for, we need both reports: the aging report for the complete roster, and the receivables report for the monthly activity detail
+- Missing homeowners ≠ parsing error. It's by design.
+
+**One-liner:** *"Before blaming your parser for 'missing' data, understand which report shows what. Not all reports show all records."*
+
+---
+
+*More lessons coming as we build the Reconciliation Engine and Audit Report Generator...*
