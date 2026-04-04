@@ -31,6 +31,8 @@ data/query_test.txt
 data/query_results.txt
 data/_debug_*
 data/_verification_*
+data/audit_results/
+data/*.json
 
 # LangSmith traces
 .langsmith/
