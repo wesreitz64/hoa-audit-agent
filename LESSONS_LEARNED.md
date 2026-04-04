@@ -546,6 +546,48 @@ The exact thresholds are for the board to decide. But the auditor can **enforce*
 
 **One-liner:** *"Your auditor's most valuable finding won't be a math error — it'll be the payment nobody asked about because nobody was looking."*
 
+## 20. Defensive String Parsing — "To" vs "From" Changes Everything
+
+Our first bank statement extractor (Regex + purely deterministic string checks) had a severe bug that sailed through early unit tests:
+
+```python
+# The Naive Check
+if "8766" in page.text or "RESERVE" in page.text.upper():
+    account_type = "reserve"
+```
+
+**The Bug:** Page 15 was an Operating statement (ending in `8763`). But one text line in the transaction list read:
+`02/17/2026     $279.17    CincXfer to 8766`
+
+Because the string `"8766"` appeared anywhere on the page, the parser misclassified the entire $13,000 operating statement as the reserve account. This would have silently corrupted every audit run.
+
+**The Fix:** We constrained the classification scope strictly to the document header — the first 15 lines of text on the page — refusing to pull context from the dynamic data payload (the transaction descriptions).
+
+**One-liner:** *"Never use global string matching on a document when the token you're looking for (an account number) could legitimately appear in the payload of the document."*
+
 ---
 
-*More lessons coming as we build the LangGraph StateGraph and HITL Veto Point...*
+## 21. Content Hashing Beats File Names for Deduplication
+
+In property management systems, it's incredibly common for board members to download the same financial packet twice, resulting in files like:
+- `Briarwyck Monthly Financials 2026 2.pdf`
+- `Briarwyck Monthly Financials 2026 2 (1).pdf`
+
+If your batch runner processes both, you double your Anthropic API bill for zero new information, and your "unapproved check" counts artificially double in your visualizations.
+
+**The Fix:**
+```python
+hasher = hashlib.sha256()
+with open(pdf, 'rb') as f:
+    hasher.update(f.read())
+file_hash = hasher.hexdigest()
+
+if file_hash in seen_hashes:
+    continue # Skip, even with a different filename
+```
+
+**One-liner:** *"Your users will download the same file 5 times. Hash the file contents, not the filename, before you spend a dime on inference."*
+
+---
+
+*More lessons coming as we build the Web Dashboard...*

@@ -40,6 +40,23 @@ The CINCSystems Invoice List (pages 7-8) is the official record of all vendor pa
 
 ---
 
+## 🔴 FLAG 1B: Systemic Unapproved Checks (Pattern Detected)
+
+**Severity: CRITICAL** — The batch audit of prior months revealed that bypassing the Approved Invoice List is a recurring pattern, not an isolated incident.
+
+### Unapproved Checks — July 2025
+
+| Check # | Amount | Date Cleared | On Invoice List? |
+|---|---|---|---|
+| **#1057** | **$4,600.00** | 2025-07-21 | ❌ NO |
+| **#1056** | **$1,770.04** | 2025-07-03 | ❌ NO |
+
+**Total unapproved payments (Jul 2025): $6,370.04**
+
+*Almost every month audited so far contains at least one unapproved check. The board is authorizing payments via a blind parallel process (likely email), rendering the CINCSystems Invoice List useless as an oversight control.*
+
+---
+
 ## 🟡 FLAG 2: Pending ACH — Invoice Approved But Not Yet Cleared
 
 | Vendor | Amount | Payment Type | Paid Date (CINCSystems) | Cleared Bank? |
