@@ -463,4 +463,89 @@ The full roster of ~96 units appears on the Homeowner Aging Report (pages 9-13),
 
 ---
 
-*More lessons coming as we build the Reconciliation Engine and Audit Report Generator...*
+## 18. Circuit Breakers — Every Loop and API Call Needs a Kill Switch
+
+A brute-force column mapping script was launched to try all 720 permutations. It had no timeout. It ran for **9 hours** unattended on the developer's machine. If it had been calling a paid API in that loop, the cost could have been catastrophic.
+
+**The rule:** Every process that loops, every API call, and every AI inference call MUST have aggressive safeguards:
+
+```python
+# ❌ NEVER do this
+for perm in itertools.permutations(columns):
+    result = expensive_api_call(perm)  # No limit, no timeout, no kill switch
+
+# ✅ ALWAYS do this
+MAX_ITERATIONS = 100
+TIMEOUT_SECONDS = 30
+start = time.time()
+
+for i, perm in enumerate(itertools.permutations(columns)):
+    if i >= MAX_ITERATIONS:
+        print(f"BREAKER: Hit {MAX_ITERATIONS} iteration limit")
+        break
+    if time.time() - start > TIMEOUT_SECONDS:
+        print(f"BREAKER: Hit {TIMEOUT_SECONDS}s timeout")
+        break
+    result = expensive_api_call(perm)
+```
+
+**The checklist for ANY automated process:**
+
+| Safeguard | Why | Example |
+|---|---|---|
+| **Max iterations** | Prevents infinite loops | `if i >= 100: break` |
+| **Timeout** | Prevents runaway processes | `if elapsed > 30: break` |
+| **Cost ceiling** | Prevents surprise bills | `if total_cost > 1.00: break` |
+| **Token budget** | Prevents LLM cost overrun | `if tokens_used > 10000: break` |
+| **Cleanup on exit** | Don't leave zombies | `finally: kill_subprocess()` |
+
+**Special rules for AI/API calls in loops:**
+- Set a **dollar ceiling** before starting: "This batch should cost no more than $X"
+- Log every call with its cost in real-time
+- If you're sleeping between retries, use exponential backoff with a **max retry count**
+- Never run paid API loops in the background unattended
+
+**One-liner:** *"A loop without a breaker is a credit card without a limit. Add timeouts, max iterations, and cost ceilings to everything — especially the things you think will 'only take a second.'"*
+
+---
+
+## 19. The Audit Finds the Governance Gaps — Not Just the Math Errors
+
+The Deterministic Auditor's first run didn't just find math discrepancies — it found **$2,457 in checks that bypassed the standard approval process.**
+
+Every month, CINCSystems produces an Invoice List — the official record of vendor payments approved by the property manager (Holli Nugent). The board reviews this list. But in February 2026, two checks cleared the bank that **never appeared on this list:**
+
+| Check # | Payee | Amount | On Invoice List? |
+|---|---|---|---|
+| #1077 | Scarbrough, Medlin & Associates (possible prior insurance company) | $1,907.00 | ❌ |
+| #1076 | Manning & Meyers (law firm — also has an approved $1,087.50 check) | $550.00 | ❌ |
+
+No single person **asked** the auditor to look for unapproved checks. The pattern emerged naturally from cross-referencing bank debits against the invoice list. This is the power of deterministic reconciliation: the math doesn't have opinions, but it does have questions.
+
+**The governance lesson:**
+
+For any HOA (or company), payments above a threshold should require documented multi-party approval:
+
+```
+Payment Amount          Required Approval
+─────────────────────   ──────────────────────────────
+< $500                  Property Manager only
+$500 - $2,500           Property Manager + Board Treasurer
+> $2,500                Property Manager + Board Vote (documented in minutes)
+Emergency (any amount)  Any two board members + documented within 48 hours
+```
+
+The exact thresholds are for the board to decide. But the auditor can **enforce** them — any check above the threshold without a matching invoice list entry gets flagged as a red flag automatically.
+
+**What we built:**
+- `detect_unapproved_checks()` — cross-references every bank check against the approved invoice list
+- If a check has no matching invoice, it's flagged as `RED FLAG: UNAPPROVED`
+- Output goes to both `audit_result.json` (structured) and `RED_FLAGS.md` (human-readable)
+
+**The deeper insight:** Most financial fraud isn't sophisticated. It's a check written to a vendor that nobody questioned because nobody was comparing two documents side by side. An automated auditor does this comparison in milliseconds, every month, without getting bored or distracted.
+
+**One-liner:** *"Your auditor's most valuable finding won't be a math error — it'll be the payment nobody asked about because nobody was looking."*
+
+---
+
+*More lessons coming as we build the LangGraph StateGraph and HITL Veto Point...*
