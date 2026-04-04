@@ -853,8 +853,26 @@ def run_batch(pdf_dir: str, approve: bool = True):
     print(f"  {len(pdfs)} PDFs found in {pdf_dir}")
     print(f"{'═'*70}")
 
+    import hashlib
     results = []
+    seen_hashes = set()
+    
     for i, pdf in enumerate(pdfs, 1):
+        # Calculate file hash for exact duplicate detection
+        hasher = hashlib.sha256()
+        with open(pdf, 'rb') as f:
+            hasher.update(f.read())
+        file_hash = hasher.hexdigest()
+
+        if file_hash in seen_hashes:
+            print(f"\n\n{'▶'*3} [{i}/{len(pdfs)}] {pdf.name} (SKIPPED - DUPLICATE CONTENT)")
+            results.append({
+                "pdf": pdf.name,
+                "status": "skipped_duplicate"
+            })
+            continue
+            
+        seen_hashes.add(file_hash)
         print(f"\n\n{'▶'*3} [{i}/{len(pdfs)}] {pdf.name}")
         try:
             result = run_single(str(pdf), approve=approve)
@@ -878,7 +896,7 @@ def run_batch(pdf_dir: str, approve: bool = True):
 
     # Summary table
     print(f"\n\n{'═'*70}")
-    print(f"  BATCH AUDIT SUMMARY — {len(pdfs)} months")
+    print(f"  BATCH AUDIT SUMMARY — {len(pdfs)} files processed")
     print(f"  {'─'*66}")
     print(f"  {'PDF':<45s} {'Conf':>6s} {'Checks':>8s} {'Flags':>6s}")
     print(f"  {'─'*66}")
@@ -886,6 +904,8 @@ def run_batch(pdf_dir: str, approve: bool = True):
         if r["status"] == "complete":
             print(f"  {r['pdf']:<45s} {r['confidence']:>5.1%} "
                   f"{r['checks_passed']:>3d}/{r['total_checks']:<3d}  {r['red_flags']:>4d}")
+        elif r["status"] == "skipped_duplicate":
+            print(f"  {r['pdf']:<45s} {'SKIPPED (DUP)':>18s}")
         else:
             print(f"  {r['pdf']:<45s} {'FAILED':>6s}")
     print(f"{'═'*70}\n")
