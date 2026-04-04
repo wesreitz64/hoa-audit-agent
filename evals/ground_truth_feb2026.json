@@ -81,8 +81,8 @@
   },
   {
     "page_number": 17,
-    "ground_truth": "bank_statement",
-    "notes": "verified"
+    "ground_truth": "boilerplate",
+    "notes": "blank page inserted by bank — 'This Page Left Intentionally Blank'"
   },
   {
     "page_number": 18,
@@ -101,8 +101,8 @@
   },
   {
     "page_number": 21,
-    "ground_truth": "bank_statement",
-    "notes": "verified"
+    "ground_truth": "boilerplate",
+    "notes": "blank page inserted by bank — 'This Page Left Intentionally Blank'"
   },
   {
     "page_number": 22,
