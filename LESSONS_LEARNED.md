@@ -655,4 +655,28 @@ Why? Because the `Other` preset treats the build as a standard static website ge
 
 ---
 
-*More lessons coming as we build Phase 3...*
+## 27. HTML `<select>` is Dead for Enterprise UX — You Need Custom Comboboxes
+
+When building the Data Warehouse UI, we originally used a standard HTML `<select>` tag for the "Target Account" dropdown. It was simple, quick to implement, and populated 52 homeowners flawlessly.
+
+**The Problem:** The `<select>` tag is natively built to sort by the exact string value provided. If you sort it alphabetically by user name ("Laura Barrett"), but the user types "TPB27" (the unit ID) on their keyboard to quickly jump to it, the browser's native `<select>` fails to match. The user is stuck scrolling manually.
+
+**The Fix:**
+```tsx
+// Instead of this:
+<select>
+  <option value="TPB27">TPB27 - Laura Barrett</option>
+</select>
+
+// You must build a custom 'Combobox' with a real text input:
+<input type="text" onChange={(e) => setQuery(e.target.value)} />
+{availableUnits.filter(u => u.unit.includes(query) || u.name.includes(query)).map(...) }
+```
+
+**The deeper insight:** Enterprise tools are used by domain experts (accountants, board members) who have memorized short-codes, account numbers, and GL codes. They do not want to hunt through alphabetical lists. A custom combobox that simultaneously matches against BOTH the human-readable string (Name) and the machine ID (Unit #) is a strict requirement for financial tooling, not just a "nice to have."
+
+**One-liner:** *"If your user has memorized the ID codes, don't force them to scroll through the names. Kill the `<select>` tag and build a dual-matching combobox."*
+
+---
+
+*More lessons coming as we build Phase 4...*
