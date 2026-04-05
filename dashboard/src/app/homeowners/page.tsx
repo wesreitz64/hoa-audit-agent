@@ -30,6 +30,10 @@ export default function HomeownersPage() {
   const [search, setSearch] = useState('');
   const [startPeriod, setStartPeriod] = useState<string>('');
   const [endPeriod, setEndPeriod] = useState<string>('');
+  
+  // Combobox state
+  const [accountDropdownOpen, setAccountDropdownOpen] = useState(false);
+  const [accountQuery, setAccountQuery] = useState('');
 
   useEffect(() => {
     fetch('/api/homeowner-records')
@@ -50,7 +54,8 @@ export default function HomeownersPage() {
     records.forEach(r => {
       if (!map.has(r.unit_id)) map.set(r.unit_id, r.homeowner_name);
     });
-    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0]));
+    // Sort by Resident Name alphabetically instead of Unit ID
+    return Array.from(map.entries()).sort((a, b) => a[1].localeCompare(b[1]));
   }, [records]);
 
   // Compute strictly chronological periods for the delinquency matrix
@@ -163,17 +168,55 @@ export default function HomeownersPage() {
             <div className="flex items-center gap-4">
               {viewMode === 'trace' ? (
                 <>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col relative w-[300px]">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Target Account</label>
-                    <select 
-                      value={selectedUnit}
-                      onChange={(e) => setSelectedUnit(e.target.value)}
-                      className="bg-slate-50 border border-slate-200 shadow-inner rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100 transition-all appearance-none cursor-pointer w-[300px]"
+                    <div 
+                      className="bg-slate-50 border border-slate-200 shadow-inner rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 cursor-pointer flex justify-between items-center"
+                      onClick={() => { setAccountDropdownOpen(!accountDropdownOpen); setAccountQuery(''); }}
                     >
-                      {availableUnits.map(([unit, name]) => (
-                        <option key={unit} value={unit}>{unit} - {name.substring(0,25)}</option>
-                      ))}
-                    </select>
+                      <span className="truncate">
+                        {selectedUnit ? `${availableUnits.find(u => u[0] === selectedUnit)?.[1] || ''} (${selectedUnit})` : 'Select Account...'}
+                      </span>
+                      <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    
+                    {accountDropdownOpen && (
+                      <>
+                        <div className="absolute top-full left-0 mt-1 w-[350px] z-50 bg-white border border-slate-200 rounded-xl shadow-2xl max-h-[400px] flex flex-col overflow-hidden">
+                          <div className="p-2 border-b border-slate-100 bg-slate-50/50">
+                            <input 
+                              autoFocus
+                              type="text"
+                              value={accountQuery}
+                              onChange={e => setAccountQuery(e.target.value)}
+                              placeholder="Type name or unit ID to search..."
+                              className="w-full bg-white border border-slate-200 shadow-inner rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 placeholder:text-slate-400"
+                            />
+                          </div>
+                          <div className="overflow-y-auto">
+                            {availableUnits
+                              .filter(([unit, name]) => 
+                                unit.toLowerCase().includes(accountQuery.toLowerCase()) || 
+                                name.toLowerCase().includes(accountQuery.toLowerCase())
+                              )
+                              .map(([unit, name]) => (
+                                <div 
+                                  key={unit}
+                                  className="px-4 py-3 text-sm hover:bg-indigo-50 border-b border-slate-50 cursor-pointer text-slate-700 transition-colors"
+                                  onClick={() => { setSelectedUnit(unit); setAccountDropdownOpen(false); }}
+                                >
+                                  <div className="font-semibold text-slate-800">{name}</div>
+                                  <div className="text-[11px] font-mono text-slate-500 uppercase tracking-widest mt-0.5">{unit}</div>
+                                </div>
+                            ))}
+                            {availableUnits.filter(([unit, name]) => unit.toLowerCase().includes(accountQuery.toLowerCase()) || name.toLowerCase().includes(accountQuery.toLowerCase())).length === 0 && (
+                              <div className="p-4 text-center text-sm text-slate-500 italic">No matches found.</div>
+                            )}
+                          </div>
+                        </div>
+                        <div className="fixed inset-0 z-40" onClick={() => setAccountDropdownOpen(false)}></div>
+                      </>
+                    )}
                   </div>
                   
                   <div className="w-px h-10 bg-slate-200 mx-2 hidden lg:block"></div>
