@@ -590,4 +590,31 @@ if file_hash in seen_hashes:
 
 ---
 
+## 22. Prompt Modifiers to Control AI Verbosity & Cost
+
+When developing large, context-heavy projects like the Swarm, an LLM will naturally tend to explain its output. Over a long conversation, this "helpful" exposition burns down your context window limit, driving up token costs and slowing the agent to a crawl.
+
+**The Fix:** We built a universal set of prompt modifiers (via a `/help` workflow) and strictly enforced them by adding a rule to the `PROGRESS.md` handover document. 
+
+* **`-q` / `--quiet`**: Execute the task but reply with a single 1-sentence confirmation. (Zero exposition).
+* **`--explain`**: Provide a line-by-line breakdown of complex logic.
+* **`--step`**: Pause and ask for explicit permission before moving to the next chunk of work.
+* **`--artifact` / `--md`**: Dump large code diffs or analysis reports into a separate markdown file instead of the chat window.
+
+By tying this directly to our `/progress` startup command, every new session instantly inherits these strict formatting requirements, ensuring the AI never wastes tokens on things you didn't ask for.
+
+**One-liner:** *"Control your AI's verbosity with shorthand flags. Your context window is finite; don't let polite explanations eat your budget."*
+
+---
+
+## 23. Code Generation to Scripts — Turn AI "Aha" Moments into Reusable Actions
+
+When you discover a new pattern or need the AI to perform a repetitive diagnostic task—like generating a sequence diagram or printing a markdown table of dependencies—it's tempting to just ask the chat interface for it every time. But doing so costs tokens for the prompt, the generation, and context window churn.
+
+**The Fix:** The very first time the AI figures out how to generate the asset correctly, tell it to *script itself*. Have the AI write a simple Python script or shell script that outputs the same diagram. The next time you need it, you simply run the local script in the background.
+
+**One-liner:** *"If the AI solves a problem once, make it write a script to solve it forever. Save your tokens for new problems, not repetitive chores."*
+
+---
+
 *More lessons coming as we build the Web Dashboard...*

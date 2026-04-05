@@ -130,13 +130,18 @@ export default function Dashboard() {
             <p className="text-slate-400 pl-1">Deterministic Financial Verification Engine</p>
           </div>
           <div className="text-right">
-            <div className="text-sm text-slate-500 uppercase tracking-widest font-semibold mb-1">Status</div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4 mb-3">
+              <a href="/data-warehouse" className="px-4 py-2 text-sm font-medium bg-white/5 hover:bg-white/10 text-cyan-400 border border-cyan-500/30 rounded-lg transition-colors flex items-center gap-2">
+                <FileSearch className="w-4 h-4" />
+                Data Warehouse
+              </a>
+            </div>
+            <div className="flex items-center gap-2 justify-end">
               <span className="relative flex h-3 w-3">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
               </span>
-              <span className="text-emerald-400 font-medium">System Online</span>
+              <span className="text-emerald-400 font-medium text-sm">System Online</span>
             </div>
           </div>
         </header>
@@ -472,23 +477,23 @@ export default function Dashboard() {
           <div className="space-y-4">
             
             <div className="p-4 bg-[#0A0A0B]/50 border border-white/5 rounded-xl">
-              <h4 className="font-medium text-white mb-1">1. LLM Extraction + Deterministic Python</h4>
+              <h4 className="font-medium text-white mb-1">1. Anomaly-First Extraction (Margin Protection)</h4>
               <p className="text-sm text-slate-400">
-                You cannot trust LLMs to do math or identify accounting errors natively. The architecture must strictly limit LLMs (Claude/Gemini) to unstructured vision parsing (reading messy invoices), while bridging that data directly into Pydantic models for pure Python validation against ending bank balances.
+                To run an AI audit at scale (10,000+ HOAs), unit economics are critical. The Swarm is intentionally designed <strong>not</strong> to parse the standard 150-line operational budget. By restricting the LLM purely to extracting unapproved checks and mathematical anomalies, we cut output token costs by 95%, processing 45-page financial PDFs for roughly $0.10 computing cost per run.
               </p>
             </div>
 
             <div className="p-4 bg-[#0A0A0B]/50 border border-white/5 rounded-xl">
-              <h4 className="font-medium text-white mb-1">2. Defensive String Parsing</h4>
+              <h4 className="font-medium text-white mb-1">2. "The Sandwich Pattern" (Speed & Determinism)</h4>
               <p className="text-sm text-slate-400">
-                Never use global string matching on a document when the token you are looking for (like the Reserve Account `8766`) could legitimately appear in the payload (a bank transfer description). Context boundary enforcement is paramount.
+                LLMs are highly capable at unstructured vision parsing (reading messy check images), but they are fundamentally unreliable at mathematics. The pipeline "sandwiches" the AI: Anthropic extracts the entities into rigid Pydantic models, and then passes them perfectly formatted to <strong>Pure Python</strong>, which handles the deterministic ledger math in milliseconds at zero cost.
               </p>
             </div>
 
             <div className="p-4 bg-[#0A0A0B]/50 border border-white/5 rounded-xl">
-              <h4 className="font-medium text-white mb-1">3. Content Hashing over File Names</h4>
+              <h4 className="font-medium text-white mb-1">3. SHA256 PDF Content Hashing</h4>
               <p className="text-sm text-slate-400">
-                End users will download the exact same financial PDF multiple times resulting in `Report (1).pdf`, doubling your Anthropic inference costs and duplicate anomaly counts. SHA256 content hashing at the LangGraph graph-entry point is required to protect margins.
+                End users inevitably upload the exact same financial PDF multiple times <code>Report (1).pdf</code>. Without defense mechanisms, this doubles API inference costs and pollutes the database with twin anomalies. Content-level SHA256 hashing at the Graph-entry point acts as an impenetrable shield, dropping duplicates before they ever reach the expensive LLM layer.
               </p>
             </div>
 
