@@ -226,7 +226,7 @@ export default function HomeownersPage() {
             )}
           </div>
 
-          <div className="overflow-x-auto p-0">
+          <div className="overflow-x-auto p-0 [&::-webkit-scrollbar]:h-3 [&::-webkit-scrollbar-track]:bg-slate-50 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full pb-4 mb-2">
             {viewMode === 'trace' ? (
               <table className="w-full text-left text-sm text-slate-700 border-collapse">
                 <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase text-[10px] tracking-widest font-semibold sticky top-0 z-10">
