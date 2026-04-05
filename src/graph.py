@@ -1,6 +1,18 @@
 """
 HOA Financial Audit Swarm — LangGraph StateGraph
 
+```mermaid
+flowchart TD
+    A[Bank Statement PDF] -->|Ingested by| B(LangGraph Pipeline)
+    B --> C{Anthropic Triage}
+    C -->|Valid| D[Vendor Data Extraction]
+    C -->|Valid| E[Bank Reconciler]
+    D --> F[(SQLite Audit DB)]
+    E --> F
+    F -->|Queried by| G[Next.js Web Dashboard]
+```
+
+
 The production pipeline that wires all nodes together:
 
   PDF → [triage] → [extract_invoices] → [extract_bank] → [extract_ledger] → [audit] → [report]
@@ -64,6 +76,7 @@ class AuditState(TypedDict):
     # ── Node 2: Extractor outputs ──
     bank_transactions: Annotated[list[dict], _merge_lists]
     invoice_list_items: Annotated[list[dict], _merge_lists]
+    income_statement_items: Annotated[list[dict], _merge_lists]
     homeowner_ledger: Annotated[list[dict], _merge_lists]
 
     # ── Node 3: Auditor output ──
@@ -345,6 +358,45 @@ def extract_ledger_node(state: AuditState) -> dict:
 
 
 # ══════════════════════════════════════════════════════════════════════
+# Node 2d: Income Statement Extractor
+# ══════════════════════════════════════════════════════════════════════
+
+def extract_income_node(state: AuditState) -> dict:
+    """
+    Extract YTD and Annual budget vs actuals from Income Statement.
+    """
+    from src.agents.income_statement_extractor import extract_income_statement
+    
+    routing = state["page_routing"]
+    income_pages = routing.get("income_statement", [])
+    
+    if not income_pages:
+        print("\n  ℹ️  No income_statement pages found — skipping extractor")
+        return {"income_statement_items": [], "errors": []}
+        
+    pdf_path = state["pdf_path"]
+    start = time.time()
+    
+    print(f"\n{'═'*70}")
+    print(f"  📊 NODE 2d: INCOME STATEMENT EXTRACTOR")
+    print(f"  Processing pages: {income_pages}")
+    print(f"{'═'*70}")
+    
+    import json
+    with open("data/triage_full_results.json", "w") as f:
+        json.dump(state.get("classified_pages", []), f)
+        
+    all_items = extract_income_statement(pdf_path, "data/triage_full_results.json")
+    
+    elapsed = time.time() - start
+    
+    return {
+        "income_statement_items": [i.model_dump(mode="json") for i in all_items],
+        "timing": {**state.get("timing", {}), "extract_income": elapsed},
+    }
+
+
+# ══════════════════════════════════════════════════════════════════════
 # Node 3: Deterministic Auditor
 # ══════════════════════════════════════════════════════════════════════
 
@@ -440,6 +492,21 @@ def audit_node(state: AuditState) -> dict:
             report.red_flags.append(
                 f"UNAPPROVED CHECKS: {len(unapproved)} totaling ${total_u:,.2f}"
             )
+            
+            # --- AI FORENSIC ANALYSIS (Phase 3) ---
+            print(f"  🧠 Conducting Sonnet 3.5 Forensic Analysis on unmatched records...")
+            try:
+                from src.config import get_llm
+                from langchain_core.messages import SystemMessage, HumanMessage
+                sonnet_llm = get_llm(model="claude-3-5-sonnet-20241022", temperature=0)
+                evaluation = sonnet_llm.invoke([
+                    SystemMessage(content="You are a forensic HOA auditor. Look at these unapproved bank debits vs pending invoices. Determine if this is a timing error, voided check, or potential theft. Keep your response strict, forensic, and 2 sentences max."),
+                    HumanMessage(content=f"Unapproved Debits: {unapproved}\nPending Invoices: {pending}")
+                ])
+                report.red_flags.append(f"AI Forensic Analysis: {evaluation.content}")
+                print(f"  🧠 Forensic Result: {evaluation.content}")
+            except Exception as e:
+                print(f"  ❌ Forensic Analysis failed: {e}")
 
     if bank_txns:
         rejected = detect_rejected_checks(bank_txns)
@@ -488,6 +555,18 @@ def audit_node(state: AuditState) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"audit_{pdf_name}.json"
     save_audit_report(report, output_path)
+    
+    # INJECT PHASE 2 DATA (All Invoices & Income Statement) into JSON directly
+    if output_path.exists():
+        with open(output_path, "r", encoding="utf-8") as f:
+            final_json = json.load(f)
+            
+        final_json["all_invoices"] = state.get("invoice_list_items", [])
+        final_json["income_statement"] = state.get("income_statement_items", [])
+        final_json["pdf"] = pdf_name
+        
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(final_json, f, indent=2)
 
     elapsed = time.time() - start
 
@@ -667,6 +746,7 @@ def build_audit_graph() -> StateGraph:
     builder.add_node("extract_invoices", extract_invoices_node)
     builder.add_node("extract_bank", extract_bank_node)
     builder.add_node("extract_ledger", extract_ledger_node)
+    builder.add_node("extract_income", extract_income_node)
     builder.add_node("audit", audit_node)
     builder.add_node("hitl_review", hitl_review_node)
     builder.add_node("report", report_node)
@@ -676,7 +756,8 @@ def build_audit_graph() -> StateGraph:
     builder.add_edge("triage", "extract_invoices")
     builder.add_edge("extract_invoices", "extract_bank")
     builder.add_edge("extract_bank", "extract_ledger")
-    builder.add_edge("extract_ledger", "audit")
+    builder.add_edge("extract_ledger", "extract_income")
+    builder.add_edge("extract_income", "audit")
     builder.add_conditional_edges(
         "audit",
         route_after_audit,
@@ -698,6 +779,7 @@ def build_audit_graph_with_checkpointer():
     builder.add_node("extract_invoices", extract_invoices_node)
     builder.add_node("extract_bank", extract_bank_node)
     builder.add_node("extract_ledger", extract_ledger_node)
+    builder.add_node("extract_income", extract_income_node)
     builder.add_node("audit", audit_node)
     builder.add_node("hitl_review", hitl_review_node)
     builder.add_node("report", report_node)
@@ -706,7 +788,8 @@ def build_audit_graph_with_checkpointer():
     builder.add_edge("triage", "extract_invoices")
     builder.add_edge("extract_invoices", "extract_bank")
     builder.add_edge("extract_bank", "extract_ledger")
-    builder.add_edge("extract_ledger", "audit")
+    builder.add_edge("extract_ledger", "extract_income")
+    builder.add_edge("extract_income", "audit")
     builder.add_conditional_edges(
         "audit",
         route_after_audit,
@@ -765,14 +848,14 @@ def _detect_period(pdf_path: str) -> str:
             return f"{month_names[month_num]} {year}"
 
     # Pattern: month name + year
-    for month_name, month_num in months.items():
+    for month_name, month_num_str in months.items():
         if month_name in name:
             m = re.search(r'(\d{4})', name)
             if m:
                 return f"{month_name.capitalize()} {m.group(1)}"
 
     # No year in filename — try reading from PDF content
-    for month_name, month_num in months.items():
+    for month_name, month_num_str in months.items():
         if month_name in name:
             try:
                 from src.utils.pdf_reader import extract_pages
@@ -917,11 +1000,20 @@ def run_batch(pdf_dir: str, approve: bool = True):
         json.dump(results, f, indent=2)
     print(f"  📄 Batch summary: {output}")
 
+    # Auto-ingest into Data Warehouse UI
+    print(f"\n  🔄 Injecting batch into Data Warehouse SQLite...")
+    try:
+        import subprocess
+        subprocess.run([sys.executable, "-m", "src.ingest_db"], check=True)
+    except Exception as db_err:
+        print(f"  ❌ Failed to invoke SQLite ingestion: {db_err}")
+
     return results
 
 
 if __name__ == "__main__":
     import argparse
+    import sys
 
     parser = argparse.ArgumentParser(
         description="HOA Financial Audit Swarm — LangGraph Pipeline"
