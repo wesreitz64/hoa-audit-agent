@@ -38,8 +38,9 @@ Finalize a multi-agent, deterministic AI swarm that autonomously parses monthly 
 - [x] Implement Light Theme transformation for the Data Warehouse (In Progress - Tailwind refactoring needed).
 - [ ] Build dynamic universal reporting matrix (Any Month, Custom Begin/End Dates, Filter by All/Specific Vendors).
 
-### Phase 4: Homeowner AR Extraction (Future Focus ⏳)
-- [ ] Map deterministically PrePaid and Delinquent Owner accounts.
+### Phase 4: Homeowner AR Extraction (Next Focus ⏳)
+- [ ] Update `ingest_db.py` to save 100% of all parsed `homeowner_records` (52+ homeowners) into the SQLite Data Warehouse.
+- [ ] Map deterministically PrePaid and Delinquent Owner accounts across a 14-month historical view.
 - [ ] Ensure `Association Total` cross-verifies directly against the physical mathematical additions.
 
 ### Phase 5: Developer Experience & Knowledge Base (Completed ✔️)
