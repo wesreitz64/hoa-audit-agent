@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-04-03T22:23:46.453163",
+  "period": "December 2025",
+  "summary": {
+    "total_checks": 61,
+    "checks_passed": 59,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 28506.22,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 3678.5,
+      "difference": 24827.72,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 36 transactions",
+        "Homeowner ledger entries: 57 accounts"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 3650.39,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 4560.2699999999995,
+      "difference": -909.8799999999997,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 12",
+        "  Vendor Pay: 5 = $3,191.71",
+        "  Checks:     1 = $220.00",
+        "  Auto/ACH:   5 = $238.68",
+        "Invoice list entries: 8"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 125.83,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 125.83,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 1",
+        "Reserve \u2190 Operating transfers: 1"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 28506.22,
+      "source_b": "Operating Debits",
+      "amount_b": 3776.22,
+      "difference": 24730.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  36 transactions",
+        "Operating debits:   12 transactions",
+        "Net cash flow: $+24,730.00 (positive \u2014 more in than out)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 57,
+    "passed": 50,
+    "carryforward": 7,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB04",
+        "homeowner_name": "Elizabeth Parker-Teal",
+        "computed_ending": -248.0,
+        "actual_ending": -250.0,
+        "difference": -2.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB17",
+        "homeowner_name": "Mary Ruth Montgomery",
+        "computed_ending": -124.0,
+        "actual_ending": -127.72,
+        "difference": -3.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB39",
+        "homeowner_name": "Roy Dean Farris, Jr.",
+        "computed_ending": 0.0,
+        "actual_ending": -124.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB41",
+        "homeowner_name": "Rachael Jacobs",
+        "computed_ending": -218.0,
+        "actual_ending": -342.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB57",
+        "homeowner_name": "Emily and Royce  McIntosh",
+        "computed_ending": 0.0,
+        "actual_ending": -124.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB90",
+        "homeowner_name": "Kelly Burns",
+        "computed_ending": 0.0,
+        "actual_ending": -251.72,
+        "difference": -251.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB96",
+        "homeowner_name": "Carolyn Jobe",
+        "computed_ending": 0.0,
+        "actual_ending": -149.0,
+        "difference": -149.0,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [],
+    "pending_invoices": [
+      {
+        "vendor_name": "Reliant",
+        "amount": 76.95,
+        "payment_type": "Auto Pay",
+        "paid_date": "2025-12-01",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": []
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$24,827.72",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$-909.88"
+  ]
+}

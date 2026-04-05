@@ -1,0 +1,70 @@
+
+============================================================
+  Q: How much did we spend on electricity?
+============================================================
+
+  A: Based on our financial records, Briarwyck Owners Association spent **$67.43** on electricity.
+
+This represents the total amount recorded in our Electricity general ledger account across all invoices in the system.
+
+*Note: This query provides the aggregate spending amount but doesn't include details about specific vendors, dates, or invoice counts. For a more comprehensive analysis including spending patterns, vendor breakdown, or time period comparisons, additional data would be helpful.*
+
+Source: Invoice data from Electricity GL account
+
+
+============================================================
+  Q: Which vendor got paid the most?
+============================================================
+
+  A: Based on the financial records, **Granite Landscape & Maintenance, Inc.** received the highest total payments from the association, with **$4,979.50** paid to them.
+
+This represents our largest vendor expense, which is typical for HOAs as landscape maintenance is usually one of the most significant ongoing operational costs for community upkeep and curb appeal.
+
+*Source: Invoice payment records from the association's financial database*
+
+
+============================================================
+  Q: Show me all payments over $1000
+============================================================
+
+  A: Here are all payments over $1,000 for Briarwyck Owners Association:
+
+**Three payments totaling $7,469:**
+
+1. **Granite Landscape & Maintenance, Inc.** - $4,979.50
+   - Invoice #33766, paid February 9, 2026 via ACH
+   - Landscape/Grounds Contract services
+
+2. **AmTrust Financial** - $1,402.00
+   - Invoice #2026211 6300, paid February 18, 2026 via EFT
+   - General Liability Insurance
+
+3. **Manning & Meyers** - $1,087.50
+   - Invoice #440, paid February 20, 2026 via Check
+   - Legal General services
+
+**Notable findings:** Granite Landscape represents 66% of these large payments, indicating landscaping is the association's primary expense category. All payments were authorized by Holli Nugent and processed from the same bank account ending in 8763.
+
+*Source: February 2026 invoice records*
+
+
+============================================================
+  Q: What is the total spending by GL category?
+============================================================
+
+  A: Based on our financial records, here is the total spending by GL category for Briarwyck Owners Association:
+
+**Total Spending by Category:**
+- **Grounds/Landscape**: $5,979.50 (59% of total spending)
+- **Insurance**: $1,402.00
+- **Legal**: $1,087.50
+- **Administration**: $980.50
+- **Common Area**: $351.96
+- **Utilities**: $164.67
+
+**Total Association Spending: $9,966.13**
+
+**Key Observations:**
+Grounds/Landscape represents nearly 60% of our total expenditures, which is typical for HOAs but worth monitoring to ensure we're getting competitive rates and quality service. The remaining categories show a reasonable distribution across essential HOA operations.
+
+*Source: Invoice data from association financial records*

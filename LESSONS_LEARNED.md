@@ -617,4 +617,22 @@ When you discover a new pattern or need the AI to perform a repetitive diagnosti
 
 ---
 
+## 24. Context Rotation — AI Memory Management Without "New Chat" Buttons
+
+**The Problem:** Commercial AI GUIs force users to manually click "New Chat" when the context window fills up. This breaks developer momentum.
+
+**The Architectural Fix (Context Rotation / Baton Pass):**
+An Orchestrator agent acts as middleware. It counts user prompts. At prompt #10:
+1. Intercepts the message.
+2. Synthesizes an extremely dense summary of the whole 10-prompt conversation + current codebase state (using a cheap, fast model like Gemini Flash).
+3. Completely destroys and wipes the active context array (`thread_id` memory).
+4. Seeds the empty array with the Summary as System Message #1.
+5. Passes the original prompt to the execution agent.
+
+To the user, the shell/terminal remains identical. It feels like one infinite loop, but the memory is effectively "git stashed" and rotated behind the scenes, keeping the token footprint at absolute zero baseline every 10 turns.
+
+**One-liner:** *"Don't make human users manage AI memory arrays. Use a middleware agent to rotate context seamlessly while keeping the terminal infinite."*
+
+---
+
 *More lessons coming as we build the Web Dashboard...*

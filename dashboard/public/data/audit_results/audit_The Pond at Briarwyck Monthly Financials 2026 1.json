@@ -1,0 +1,217 @@
+{
+  "timestamp": "2026-04-03T22:26:52.943706",
+  "period": "January 2026",
+  "summary": {
+    "total_checks": 101,
+    "checks_passed": 99,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 65344.48,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 77454.28,
+      "difference": -12109.799999999996,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 38 transactions",
+        "Homeowner ledger entries: 97 accounts"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 16340.95,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 29557.56,
+      "difference": -13216.61,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 20",
+        "  Vendor Pay: 5 = $3,355.52",
+        "  Checks:     3 = $9,329.00",
+        "  Auto/ACH:   10 = $3,656.43",
+        "Invoice list entries: 12"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 14907.79,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 14907.79,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 2",
+        "Reserve \u2190 Operating transfers: 2"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 65344.48,
+      "source_b": "Operating Debits",
+      "amount_b": 31248.74,
+      "difference": 34095.740000000005,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  38 transactions",
+        "Operating debits:   20 transactions",
+        "Net cash flow: $+34,095.74 (positive \u2014 more in than out)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 97,
+    "passed": 87,
+    "carryforward": 10,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB06",
+        "homeowner_name": "Jeanne Stephens",
+        "computed_ending": -127.72,
+        "actual_ending": -1404.92,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB37",
+        "homeowner_name": "Bruce Richards",
+        "computed_ending": -0.0,
+        "actual_ending": -117.92,
+        "difference": -117.92,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB38",
+        "homeowner_name": "Richard Amoedo & Neva Brunson",
+        "computed_ending": -127.72,
+        "actual_ending": -1404.92,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB67",
+        "homeowner_name": "Evelyn Murphy",
+        "computed_ending": -127.0,
+        "actual_ending": -127.72,
+        "difference": -0.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB68",
+        "homeowner_name": "Janice Masters",
+        "computed_ending": -251.72,
+        "actual_ending": -1656.72,
+        "difference": -1405.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB69",
+        "homeowner_name": "Terri Atkinson",
+        "computed_ending": -248.0,
+        "actual_ending": -251.72,
+        "difference": -3.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB79",
+        "homeowner_name": "Elizabeth Finks",
+        "computed_ending": 0.0,
+        "actual_ending": -127.72,
+        "difference": -127.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB84",
+        "homeowner_name": "Wanda Palma",
+        "computed_ending": 0.0,
+        "actual_ending": -1404.92,
+        "difference": -1404.92,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB86",
+        "homeowner_name": "Beth Shutz",
+        "computed_ending": -142.72,
+        "actual_ending": -1404.92,
+        "difference": -1262.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB95",
+        "homeowner_name": "Philip R. & Judy Laun",
+        "computed_ending": 0.0,
+        "actual_ending": -25.0,
+        "difference": -25.0,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1072",
+        "amount": 4600.0,
+        "date": "2026-01-06",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1073",
+        "amount": 129.0,
+        "date": "2026-01-20",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1074",
+        "amount": 4600.0,
+        "date": "2026-01-20",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [
+      {
+        "vendor_name": "Granite Landscape & Maintenance, Inc.",
+        "amount": 13704.45,
+        "payment_type": "ACH",
+        "paid_date": "2026-01-02",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "Manning & Meyers",
+        "amount": 550.0,
+        "payment_type": "Check",
+        "paid_date": "2026-01-23",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "Scarbrough, Medlin & Associates, Inc.",
+        "amount": 1907.0,
+        "payment_type": "Check",
+        "paid_date": "2026-01-26",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": [
+      "UNAPPROVED CHECKS: 3 totaling $9,329.00"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$-12,109.80",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$-13,216.61"
+  ]
+}

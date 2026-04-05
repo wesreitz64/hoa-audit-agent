@@ -1,0 +1,123 @@
+{
+  "timestamp": "2026-04-03T22:28:59.977286",
+  "period": "November 2025",
+  "summary": {
+    "total_checks": 47,
+    "checks_passed": 45,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 2948.5,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 3306.5,
+      "difference": -358.0,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 19 transactions",
+        "Homeowner ledger entries: 43 accounts"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 8102.1,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 8050.43,
+      "difference": 51.67000000000007,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 9",
+        "  Vendor Pay: 3 = $1,240.86",
+        "  Checks:     3 = $5,807.12",
+        "  Auto/ACH:   2 = $1,054.12",
+        "Invoice list entries: 5"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 125.83,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 125.83,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 1",
+        "Reserve \u2190 Operating transfers: 1"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 2948.5,
+      "source_b": "Operating Debits",
+      "amount_b": 8227.93,
+      "difference": -5279.43,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  19 transactions",
+        "Operating debits:   9 transactions",
+        "Net cash flow: $-5,279.43 (negative \u2014 more out than in)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 43,
+    "passed": 42,
+    "carryforward": 1,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB04",
+        "homeowner_name": "Elizabeth Parker-Teal",
+        "computed_ending": -122.0,
+        "actual_ending": -248.0,
+        "difference": -126.0,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1068",
+        "amount": 51.67,
+        "date": "2025-11-04",
+        "source_page": 13,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1069",
+        "amount": 1155.45,
+        "date": "2025-11-19",
+        "source_page": 13,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1070",
+        "amount": 4600.0,
+        "date": "2025-11-19",
+        "source_page": 13,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [],
+    "summary": [
+      "UNAPPROVED CHECKS: 3 totaling $5,807.12"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$-358.00",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$51.67"
+  ]
+}

@@ -34,7 +34,9 @@ Finalize a multi-agent, deterministic AI swarm that autonomously parses monthly 
 - [x] Determine methodology for extracting row-by-row Bank Transactions from the native Bank Statements in the PDF (Adopted Python Strategy Pattern using regex).
 - [x] Cross-Reference `all_invoices` (Management Company Claims) vs. Native Bank Outflows. Find missing checks or blatant double payments.
 - [ ] Highlight missing or out-of-order check sequence anomalies natively on the dashboard.
-- [ ] Add explicit warnings to the Next.js UI when the AI detects that an invoice (like the May $3,485 to Neon Monkey) appears twice for the exact same transaction, but mapping to different payment types.
+- [ ] Add explicit warnings to the Next.js UI when the AI detects that an invoice appears twice for the exact same transaction.
+- [x] Implement Light Theme transformation for the Data Warehouse (In Progress - Tailwind refactoring needed).
+- [ ] Build dynamic universal reporting matrix (Any Month, Custom Begin/End Dates, Filter by All/Specific Vendors).
 
 ### Phase 4: Homeowner AR Extraction (Future Focus ⏳)
 - [ ] Map deterministically PrePaid and Delinquent Owner accounts.
@@ -46,6 +48,9 @@ Finalize a multi-agent, deterministic AI swarm that autonomously parses monthly 
 - [x] Generate pre-rendered PNG architecture diagrams (`.tours/images/`) — CodeTour tooltips cannot render Mermaid natively.
 - [x] Create **Trust Sandwich** diagram showing AI Layer → Deterministic Layer → Human Layer trust boundaries.
 - [x] Enforce strict prompt-limit numbering (Prompt max #10) to prevent context drift.
+
+### Phase 6: Agent Orchestration / State Machine (Future Focus ⏳)
+- [ ] Implement an explicit LangGraph State Machine (Planner/Coder/Router separation) with middleware Interceptor kill-switches to prevent infinite execution loops.
 
 ---
 

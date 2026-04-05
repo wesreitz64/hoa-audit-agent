@@ -4,7 +4,7 @@ import path from 'path';
 
 export async function GET() {
   try {
-    const resultsDir = path.join(process.cwd(), '../data/audit_results');
+    const resultsDir = path.join(process.cwd(), 'public', 'data', 'audit_results');
     
     if (!fs.existsSync(resultsDir)) {
       return NextResponse.json({ error: "Audit results directory not found." }, { status: 404 });

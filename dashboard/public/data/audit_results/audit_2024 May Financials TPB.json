@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-04-03T22:07:57.510594",
+  "period": "May 2024",
+  "summary": {
+    "total_checks": 3,
+    "checks_passed": 2,
+    "checks_failed": 1,
+    "confidence_score": 0.8,
+    "requires_human_review": false
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 6774.8,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 8884.9,
+      "difference": -2110.0999999999995,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 7",
+        "  Vendor Pay: 3 = $2,005.80",
+        "  Checks:     2 = $4,645.00",
+        "  Auto/ACH:   2 = $124.00",
+        "Invoice list entries: 6"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 0,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 0,
+      "difference": 0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 0",
+        "Reserve \u2190 Operating transfers: 0"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 1180.0,
+      "source_b": "Operating Debits",
+      "amount_b": 6774.8,
+      "difference": -5594.8,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  8 transactions",
+        "Operating debits:   7 transactions",
+        "Net cash flow: $-5,594.80 (negative \u2014 more out than in)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 0,
+    "passed": 0,
+    "carryforward": 0,
+    "failed": 0,
+    "failures": []
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1000",
+        "amount": 4600.0,
+        "date": "2024-05-24",
+        "source_page": 11,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1001",
+        "amount": 45.0,
+        "date": "2024-05-24",
+        "source_page": 11,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [
+      {
+        "vendor_name": "Cross Timbers Property and Realty LLC",
+        "amount": 265.81,
+        "payment_type": "ACH",
+        "paid_date": "2024-05-30",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "Lois Woltmann",
+        "amount": 181.83,
+        "payment_type": "Check",
+        "paid_date": "2024-05-30",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "P&M LAWN AND LANDSCAPE SERVICE",
+        "amount": 5195.0,
+        "payment_type": "Check",
+        "paid_date": "2024-05-16",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "Wesley Reitz",
+        "amount": 1236.46,
+        "payment_type": "Check",
+        "paid_date": "2024-05-30",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": [
+      "UNAPPROVED CHECKS: 2 totaling $4,645.00"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$-2,110.10"
+  ]
+}

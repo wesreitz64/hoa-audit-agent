@@ -1,0 +1,207 @@
+{
+  "timestamp": "2026-04-03T19:34:12.549317",
+  "period": "February 2026",
+  "summary": {
+    "total_checks": 56,
+    "checks_passed": 54,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 13262.54,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 9652.9,
+      "difference": 3609.6400000000012,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 30 transactions",
+        "Homeowner ledger entries: 52 accounts",
+        "Rejected checks found: 2 totaling $255.44",
+        "Adjusted difference (removing rejected): $3,354.20"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 11423.13,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 9966.13,
+      "difference": 1457.0,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 15",
+        "  Vendor Pay: 4 = $6,311.96",
+        "  Checks:     3 = $3,544.50",
+        "  Auto/ACH:   5 = $1,566.67",
+        "Invoice list entries: 9"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 279.17,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 279.17,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 1",
+        "Reserve \u2190 Operating transfers: 1"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 13262.54,
+      "source_b": "Operating Debits",
+      "amount_b": 11957.74,
+      "difference": 1304.800000000001,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  30 transactions",
+        "Operating debits:   15 transactions",
+        "Net cash flow: $+1,304.80 (positive \u2014 more in than out)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 52,
+    "passed": 44,
+    "carryforward": 8,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB01",
+        "homeowner_name": "Domingos Noronha",
+        "computed_ending": 0.0,
+        "actual_ending": -319.56,
+        "difference": -319.56,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB14",
+        "homeowner_name": "Jack & Julie Nisula",
+        "computed_ending": 0.0,
+        "actual_ending": -1277.2,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB31",
+        "homeowner_name": "Stacy & Raina Mills",
+        "computed_ending": 0.0,
+        "actual_ending": -127.72,
+        "difference": -127.72,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB39",
+        "homeowner_name": "William Allen Wiley",
+        "computed_ending": 0.0,
+        "actual_ending": -1404.2,
+        "difference": -1404.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB50",
+        "homeowner_name": "John & Darcirae Ortiz",
+        "computed_ending": 0.0,
+        "actual_ending": -1277.2,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB71",
+        "homeowner_name": "Joyce Frazier",
+        "computed_ending": 0.0,
+        "actual_ending": -1277.2,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB80",
+        "homeowner_name": "Sue Cicherski",
+        "computed_ending": 0.0,
+        "actual_ending": -1277.2,
+        "difference": -1277.2,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB96",
+        "homeowner_name": "Carolyn Jobe",
+        "computed_ending": -21.28,
+        "actual_ending": -379.44,
+        "difference": -358.16,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [
+    {
+      "description": "TRANSIT CHECK #8098 IN 02.06 DEPOSIT SET REJECTED FOR POOR IMAGE QUALITY",
+      "amount": 124.0,
+      "date": "2026-02-11",
+      "redeposit_found": true,
+      "redeposit_count": 3,
+      "redeposit_dates": [
+        "2026-02-17",
+        "2026-02-17",
+        "2026-02-26"
+      ]
+    },
+    {
+      "description": "TRANSIT CHECK #5110 IN 02.06 DEPOSIT SET REJECTED FOR POOR IMAGE QUALITY",
+      "amount": 131.44,
+      "date": "2026-02-11",
+      "redeposit_found": true,
+      "redeposit_count": 1,
+      "redeposit_dates": [
+        "2026-02-17"
+      ]
+    }
+  ],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1076",
+        "amount": 550.0,
+        "date": "2026-02-04",
+        "source_page": 15,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1077",
+        "amount": 1907.0,
+        "date": "2026-02-03",
+        "source_page": 15,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [
+      {
+        "vendor_name": "Neon Monkey LLC",
+        "amount": 1000.0,
+        "payment_type": "ACH",
+        "paid_date": "2026-02-27",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": [
+      "UNAPPROVED CHECKS: 2 check(s) totaling $2,457.00 cleared the bank without appearing on the CINCSystems approved Invoice List. Board should investigate: Check #1076, Check #1077"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$3,609.64",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$1,457.00",
+    "[RED FLAG] Check #1076: $550.00 on 2026-02-04 \u2014 not on approved Invoice List",
+    "[RED FLAG] Check #1077: $1,907.00 on 2026-02-03 \u2014 not on approved Invoice List"
+  ]
+}

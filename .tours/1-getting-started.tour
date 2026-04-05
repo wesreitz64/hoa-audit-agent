@@ -1,0 +1,32 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "1 - HOA Audit Swarm Introduction",
+  "description": "Essential architecture concepts for the HOA AI Auditor",
+  "isPrimary": true,
+  "steps": [
+    {
+      "description": "# Welcome to the HOA Financial Audit Swarm! 🐝\n\nThis project is a multi-agent AI system designed to parse, verify, and cross-reference monthly HOA financial statements.\n\nLet's walk through the core components so you can get up to speed quickly.",
+      "title": "Welcome",
+      "file": "PROGRESS.md",
+      "line": 1
+    },
+    {
+      "description": "## The Swarm Pipeline\n\nThis is the brain of the project. `graph.py` orchestrates down-stream AI nodes using `LangGraph`.\n\nPhase 1 processes the native bank statements by triaging documents with Vision models, extracting Vendor Invoices into Pydantic models, and mapping Income Statements dynamically per GL Account.",
+      "file": "src/graph.py",
+      "line": 1,
+      "title": "Agent Orchestration"
+    },
+    {
+      "description": "## Database Ingestion Requirement\n\n**Critical Note:** The frontend UI relies entirely on a local SQLite database.\n\nEvery time you modify the AI extraction logic or generate new `audit_*.json` outputs, you **MUST** run this script to push those changes to the Dashboard database.\n\n>> python -m src.ingest_db",
+      "file": "src/ingest_db.py",
+      "line": 1,
+      "title": "Data Persistence"
+    },
+    {
+      "description": "## Data Warehouse Entry Point\n\nFinally, the visualized UI sits inside the Next.js `dashboard/` workspace. The primary layout features a deterministic print layout (using `print:text-black` and `print:bg-white`) fitting seamlessly on standard letter sheets for Board meetings.\n\nYou can click here to start the development server if it isn't running:\n\n>> npm run dev",
+      "file": "dashboard/src/app/page.tsx",
+      "line": 1,
+      "title": "Dashboard App"
+    }
+  ]
+}

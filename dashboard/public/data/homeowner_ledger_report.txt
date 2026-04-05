@@ -1,0 +1,77 @@
+========================================================================================================================
+  BRIARWYCK OWNERS ASSOCIATION — HOMEOWNER LEDGER REPORT
+  Receivables Type Balances (Pages 47-53)
+  Generated: April 02, 2026
+========================================================================================================================
+
+  #   Unit Name                                Prev Bal     Billing    Receipts      Adjust     PrePaid      Ending
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  1  TPB01 Domingos Noronha                     127.72      152.72     (280.44)       0.00        0.00     (319.56)
+  2  TPB04 Elizabeth Parker-Teal               (246.28)     127.72     (127.72)       0.00        3.72     (242.56)
+  3  TPB06 Jeanne Stephens                   (1,404.92)   1,404.92   (1,277.20)       0.00    1,277.20        0.00 
+  4  TPB10 Stephan Daniels                        0.00      127.72     (127.72)       0.00        0.00        0.00 
+  5  TPB11 Stephan Daniels                    1,460.72      152.72        0.00        0.00        0.00    1,613.44 
+  6  TPB13 Brad Stewart                           0.00      142.72     (127.72)     (15.00)       0.00        0.00 
+  7  TPB14 Jack & Julie Nisula                1,517.64      270.44     (112.72)  (1,675.36)       0.00   (1,277.20)
+  8  TPB17 Mary Ruth Montgomery                (127.72)     127.72     (127.72)       0.00        0.00     (127.72)
+  9  TPB19 Katy Kiser                           (22.28)     127.72     (127.72)       0.00       22.28        0.00 
+ 10  TPB20 Erin Buck                              3.72      127.72     (124.00)       0.00        0.00        7.44 
+ 11  TPB22 Wesley Reitz                         (45.00)      45.00        0.00      (45.00)       0.00      (45.00)
+ 12  TPB25 Daniel Killian                         0.00      127.72        0.00        0.00        0.00      127.72 
+ 13  TPB26 Nahid Dalili & Sasha Sadighi Nou       6.00        0.00        0.00        0.00        0.00        6.00 
+ 14  TPB27 Laura Barrett                        733.72      152.72        0.00        0.00        0.00      886.44 
+ 15  TPB29 Trisha Tatman & Jeremy Skinner         0.00       15.00        0.00      (15.00)       0.00        0.00 
+ 16  TPB31 Stacy & Raina Mills                    0.00      127.72     (127.72)       0.00        0.00     (127.72)
+ 17  TPB35 Margaret Haven                       (15.00)      15.00        0.00      (15.00)       0.00      (15.00)
+ 18  TPB37 Bruce Richards                      (117.92)     127.72     (127.72)       0.00      117.92        0.00 
+ 19  TPB38 Richard Amoedo & Neva Brunson     (1,404.92)   1,404.92   (1,277.20)       0.00    1,277.20        0.00 
+ 20  TPB39 Roy Dean Farris, Jr.                (124.00)       0.00        0.00        0.00        0.00     (124.00)
+ 21  TPB39 William Allen Wiley                  127.72      127.72     (127.72)    (127.72)       0.00   (1,404.20)
+ 22  TPB41 Rachael Jacobs                      (353.28)     142.72     (127.72)     (15.00)       3.72     (349.56)
+ 23  TPB45 Jessica Martin                       127.72      127.72     (248.00)       0.00        0.00        7.44 
+ 24  TPB47 Ashley Lantz & Dale Lantz          1,404.92      255.44     (127.72)  (1,532.64)       0.00        0.00 
+ 25  TPB48 Leslie Oschmann                        0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 26  TPB50 John & Darcirae Ortiz              1,417.64      285.44      (12.72)  (1,690.36)       0.00   (1,277.20)
+ 27  TPB52 Jameelah Reid                        127.72      127.72     (255.44)       0.00        0.00        0.00 
+ 28  TPB54 Trevo Inman & Christy Cole             0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 29  TPB55 Jose Enrique Angulo                2,162.72      152.72        0.00        0.00        0.00    2,315.44 
+ 30  TPB57 Emily and Royce  McIntosh           (120.28)     127.72     (120.28)       0.00      120.28        7.44 
+ 31  TPB58 Amanda Phillips                      127.72      152.72        0.00        0.00        0.00      280.44 
+ 32  TPB59 Ellen Mahon                            3.72      127.72     (124.00)       0.00        0.00        7.44 
+ 33  TPB60 Chris & Mimi Scarpulla                 0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 34  TPB62 Robert & Dianne Guthrie              304.72      127.72     (216.22)       0.00        0.00      216.22 
+ 35  TPB65 Jackson  Wernli & Corinne Blangy       0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 36  TPB67 Evelyn Murphy                       (127.72)     127.72     (127.72)       0.00        0.00     (127.72)
+ 37  TPB68 Janice Masters                    (1,656.72)   1,404.92   (1,277.20)       0.00    1,153.20     (375.80)
+ 38  TPB69 Terri Atkinson                      (251.72)     127.72     (127.72)       0.00        3.72     (248.00)
+ 39  TPB71 Joyce Frazier                        127.72      127.72     (127.72)    (127.72)       0.00   (1,277.20)
+ 40  TPB76 Kendra Sidebottom                      0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 41  TPB79 Elizabeth Finks                     (127.72)     127.72     (127.72)       0.00        0.00     (127.72)
+ 42  TPB80 Sue Cicherski                        127.72      127.72     (127.72)    (127.72)       0.00   (1,277.20)
+ 43  TPB82 Vadium Vostrikov                       0.00      127.72     (127.72)       0.00        0.00        0.00 
+ 44  TPB84 Wanda Palma                       (1,404.92)       0.00        0.00        0.00        0.00   (1,404.92)
+ 45  TPB86 Beth Shutz                        (1,404.92)   1,419.92   (1,262.20)     (15.00)   1,262.20        0.00 
+ 46  TPB90 Kelly Burns                         (124.00)     127.72     (127.72)       0.00        3.72     (120.28)
+ 47  TPB91 Jessica Vespar                         0.00       30.00        0.00      (30.00)       0.00        0.00 
+ 48  TPB92 Mary Casey                             0.00       15.00        0.00      (15.00)       0.00        0.00 
+ 49  TPB94 Ann Kenas                            127.72        0.00        0.00        0.00        0.00      127.72 
+ 50  TPB94 Todd Nicolai & Geraldine Nicolai  (1,404.92)     127.72     (127.72)       0.00      127.72   (1,277.20)
+ 51  TPB95 Philip R. & Judy Laun                (25.00)       0.00        0.00        0.00        0.00      (25.00)
+ 52  TPB96 Carolyn Jobe                         (21.28)     127.72     (127.72)       0.00        0.00     (379.44)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+           TOTALS (52 accounts)                (493.24)  11,191.20   (9,652.90)  (5,446.52)   5,372.88   (6,347.02)
+========================================================================================================================
+
+  SUMMARY
+------------------------------------------------------------------------------------------------------------------------
+  Total accounts with activity:     52
+  Balance due (owe money):          12
+  PrePaid / Credit:                 22
+  Current (zero balance):           18
+  Total ending balance:        $   -6,347.02
+------------------------------------------------------------------------------------------------------------------------
+
+  NOTE: This report includes only the 52 accounts that had
+  activity during this period (pages 47-53). Accounts with no
+  activity are not listed in the Receivables Type Balances report.
+  The full roster (~96 units) appears on the Aging Report (pages 9-13).

@@ -1,0 +1,169 @@
+{
+  "timestamp": "2026-04-03T22:10:18.031398",
+  "period": "July 2025",
+  "summary": {
+    "total_checks": 46,
+    "checks_passed": 44,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 6011.5,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 4046.5,
+      "difference": 1965.0,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 23 transactions",
+        "Homeowner ledger entries: 42 accounts"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 10403.93,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 9109.42,
+      "difference": 1294.5100000000002,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 12",
+        "  Vendor Pay: 5 = $3,410.18",
+        "  Checks:     2 = $6,370.04",
+        "  Auto/ACH:   4 = $623.71",
+        "Invoice list entries: 7"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 125.83,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 125.83,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 1",
+        "Reserve \u2190 Operating transfers: 1"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 6011.5,
+      "source_b": "Operating Debits",
+      "amount_b": 10529.76,
+      "difference": -4518.26,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  23 transactions",
+        "Operating debits:   12 transactions",
+        "Net cash flow: $-4,518.26 (negative \u2014 more out than in)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 42,
+    "passed": 38,
+    "carryforward": 4,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB19",
+        "homeowner_name": "Katy Kiser",
+        "computed_ending": -274.0,
+        "actual_ending": -398.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB31",
+        "homeowner_name": "Stacy & Raina Mills",
+        "computed_ending": 0.0,
+        "actual_ending": -124.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB57",
+        "homeowner_name": "Emily and Royce  McIntosh",
+        "computed_ending": 0.0,
+        "actual_ending": -124.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB82",
+        "homeowner_name": "Vadium Vostrikov",
+        "computed_ending": -128.0,
+        "actual_ending": -484.0,
+        "difference": -356.0,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1056",
+        "amount": 1770.04,
+        "date": "2025-07-03",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1057",
+        "amount": 4600.0,
+        "date": "2025-07-21",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [
+      {
+        "vendor_name": "Ambit Texas, LLC",
+        "amount": 445.09,
+        "payment_type": "Auto Pay",
+        "paid_date": "2025-07-01",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "City of Carrollton",
+        "amount": 1454.46,
+        "payment_type": "Auto Pay",
+        "paid_date": "2025-07-01",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "P&M LAWN AND LANDSCAPE SERVICE",
+        "amount": 4750.0,
+        "payment_type": "Check",
+        "paid_date": "2025-07-15",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "Reliant",
+        "amount": 49.69,
+        "payment_type": "Auto Pay",
+        "paid_date": "2025-07-01",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": [
+      "UNAPPROVED CHECKS: 2 totaling $6,370.04"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$1,965.00",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$1,294.51"
+  ]
+}

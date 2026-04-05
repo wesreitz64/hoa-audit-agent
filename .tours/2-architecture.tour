@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "2 - System Architecture & Flows",
+  "description": "Component and Use Case diagrams of the HOA Auditor",
+  "isPrimary": false,
+  "steps": [
+    {
+      "title": "The Trust Sandwich",
+      "description": "## Trust Sandwich Architecture\n\nOur pipeline separates concerns into three trust layers:\n- **AI Layer** — LLM-powered nodes that handle fuzzy parsing (varied PDF formats)\n- **Deterministic Layer** — Pure Python math that *cannot* hallucinate\n- **Human Layer** — HITL veto gate when confidence drops below 80%\n\n![Trust Sandwich Architecture](.tours/images/trust-sandwich.png)",
+      "file": "src/graph.py",
+      "line": 8
+    },
+    {
+      "title": "Component Diagram",
+      "description": "## Major System Components\n\nThe end-to-end data flow from PDF ingestion through to the web dashboard.\n\n![Pipeline Diagram](.tours/images/pipeline-diagram.png)",
+      "file": "src/graph.py",
+      "line": 8
+    },
+    {
+      "title": "Use Case Diagram",
+      "description": "## Core Use Cases\n\nThe primary ways board members interact with the audit system.\n\n![Use Case Diagram](.tours/images/use-case-diagram.png)",
+      "file": "dashboard/src/app/page.tsx",
+      "line": 1
+    }
+  ]
+}

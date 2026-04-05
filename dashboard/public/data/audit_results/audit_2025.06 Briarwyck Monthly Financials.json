@@ -1,0 +1,877 @@
+{
+  "timestamp": "2026-04-04T16:18:37.134314",
+  "period": "June 2025",
+  "summary": {
+    "total_checks": 47,
+    "checks_passed": 45,
+    "checks_failed": 2,
+    "confidence_score": 0.7,
+    "requires_human_review": true
+  },
+  "aggregate_checks": [
+    {
+      "name": "Bank Deposits vs Homeowner Receipts",
+      "source_a": "Bank Operating Deposits",
+      "amount_a": 14129.5,
+      "source_b": "Homeowner Ledger Receipts (abs)",
+      "amount_b": 4818.5,
+      "difference": 9311.0,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Bank operating credits: 21 transactions",
+        "Homeowner ledger entries: 43 accounts"
+      ]
+    },
+    {
+      "name": "Bank Withdrawals vs Invoice List",
+      "source_a": "Bank Operating Withdrawals (excl. rejected/transfers)",
+      "amount_a": 12389.19,
+      "source_b": "CINCSystems Invoice List",
+      "amount_b": 13426.72,
+      "difference": -1037.5299999999988,
+      "passed": false,
+      "severity": "critical",
+      "details": [
+        "Operating debits (total): 15",
+        "  Vendor Pay: 5 = $4,499.18",
+        "  Checks:     5 = $6,564.48",
+        "  Auto/ACH:   4 = $1,325.53",
+        "Invoice list entries: 6"
+      ]
+    },
+    {
+      "name": "Reserve Fund Transfer Consistency",
+      "source_a": "Operating CincXfer (debit)",
+      "amount_a": 125.83,
+      "source_b": "Reserve CincXfer (credit)",
+      "amount_b": 125.83,
+      "difference": 0.0,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating \u2192 Reserve transfers: 1",
+        "Reserve \u2190 Operating transfers: 1"
+      ]
+    },
+    {
+      "name": "Operating Net Cash Flow",
+      "source_a": "Operating Credits",
+      "amount_a": 14129.5,
+      "source_b": "Operating Debits",
+      "amount_b": 12515.02,
+      "difference": 1614.4799999999996,
+      "passed": true,
+      "severity": "info",
+      "details": [
+        "Operating credits:  21 transactions",
+        "Operating debits:   15 transactions",
+        "Net cash flow: $+1,614.48 (positive \u2014 more in than out)"
+      ]
+    }
+  ],
+  "homeowner_formula_results": {
+    "total": 43,
+    "passed": 40,
+    "carryforward": 3,
+    "failed": 0,
+    "failures": [
+      {
+        "unit_id": "TPB01",
+        "homeowner_name": "Domingos Noronha",
+        "computed_ending": -372.0,
+        "actual_ending": -496.0,
+        "difference": -124.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB04",
+        "homeowner_name": "Elizabeth Parker-Teal",
+        "computed_ending": 0.0,
+        "actual_ending": -1.0,
+        "difference": -1.0,
+        "has_prepaid_carryforward": true
+      },
+      {
+        "unit_id": "TPB19",
+        "homeowner_name": "Katy Kiser",
+        "computed_ending": -98.0,
+        "actual_ending": -274.0,
+        "difference": -176.0,
+        "has_prepaid_carryforward": true
+      }
+    ]
+  },
+  "rejected_checks": [],
+  "red_flags": {
+    "unapproved_checks": [
+      {
+        "description": "Check #1042",
+        "amount": 250.0,
+        "date": "2025-06-02",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1047",
+        "amount": 156.98,
+        "date": "2025-06-09",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      },
+      {
+        "description": "Check #1054",
+        "amount": 4600.0,
+        "date": "2025-06-24",
+        "source_page": 17,
+        "flag": "UNAPPROVED \u2014 not on CINCSystems Invoice List"
+      }
+    ],
+    "pending_invoices": [
+      {
+        "vendor_name": "Neon Monkey LLC",
+        "amount": 3485.0,
+        "payment_type": "ACH",
+        "paid_date": "2025-06-18",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      },
+      {
+        "vendor_name": "P&M LAWN AND LANDSCAPE SERVICE",
+        "amount": 6370.04,
+        "payment_type": "Check",
+        "paid_date": "2025-06-18",
+        "flag": "PENDING \u2014 approved but not yet cleared bank"
+      }
+    ],
+    "summary": [
+      "UNAPPROVED CHECKS: 3 totaling $5,006.98"
+    ]
+  },
+  "flagged_issues": [
+    "[CRITICAL] Bank Deposits vs Homeowner Receipts: \u0394=$9,311.00",
+    "[CRITICAL] Bank Withdrawals vs Invoice List: \u0394=$-1,037.53"
+  ],
+  "all_invoices": [
+    {
+      "vendor_name": "Five Star Aquatics, LLC",
+      "invoice_number": "65761",
+      "invoice_date": "2025-06-01",
+      "paid_date": "2025-06-04",
+      "amount": 683.18,
+      "gl_account_code": "61-6100-00",
+      "gl_account_name": "Lake/Pond Management",
+      "payment_type": "ACH",
+      "authorized_by": "Craig Smith, CMCA\u00ae",
+      "bank_account_last4": "8763",
+      "source_page": 10
+    },
+    {
+      "vendor_name": "Neon Monkey LLC",
+      "invoice_number": "00644-I",
+      "invoice_date": "2025-05-20",
+      "paid_date": "2025-06-18",
+      "amount": 3485.0,
+      "gl_account_code": "63-5426-00",
+      "gl_account_name": "Tree Maintenance",
+      "payment_type": "ACH",
+      "authorized_by": "Craig Smith, CMCA\u00ae",
+      "bank_account_last4": "8763",
+      "source_page": 10
+    },
+    {
+      "vendor_name": "P&M LAWN AND LANDSCAPE SERVICE",
+      "invoice_number": "4558",
+      "invoice_date": "2025-06-06",
+      "paid_date": "2025-06-18",
+      "amount": 6370.04,
+      "gl_account_code": "63-5400-00",
+      "gl_account_name": "Landscape/Grounds Contract",
+      "payment_type": "Check",
+      "authorized_by": "Craig Smith, CMCA\u00ae",
+      "bank_account_last4": "8763",
+      "source_page": 10
+    },
+    {
+      "vendor_name": "PMI Cross Timbers - Mgmt Mod Only",
+      "invoice_number": "<UNKNOWN>",
+      "invoice_date": "2025-06-02",
+      "paid_date": "2025-06-02",
+      "amount": 1331.0,
+      "gl_account_code": "50-5010-00",
+      "gl_account_name": "Postage - Mailings",
+      "payment_type": "Check",
+      "authorized_by": null,
+      "bank_account_last4": "8763",
+      "source_page": 11
+    },
+    {
+      "vendor_name": "Ragland Strother & Lafitte, LLP",
+      "invoice_number": "478082",
+      "invoice_date": "2025-06-16",
+      "paid_date": "2025-06-18",
+      "amount": 1210.33,
+      "gl_account_code": "52-5046-00",
+      "gl_account_name": "Insurance - General Liability",
+      "payment_type": "Check",
+      "authorized_by": "Craig Smith, CMCA\u00ae",
+      "bank_account_last4": "8763",
+      "source_page": 11
+    },
+    {
+      "vendor_name": "Steptoe & Johnson PLLC",
+      "invoice_number": "1192556",
+      "invoice_date": "2025-05-08",
+      "paid_date": "2025-06-04",
+      "amount": 347.17,
+      "gl_account_code": "54-5100-00",
+      "gl_account_name": "Legal General",
+      "payment_type": "Check",
+      "authorized_by": "Craig Smith, CMCA\u00ae",
+      "bank_account_last4": "8763",
+      "source_page": 11
+    }
+  ],
+  "income_statement": [
+    {
+      "category": "Assessment General",
+      "gl_code": "4000-00",
+      "month_actual": 3348.0,
+      "month_budget": 4950.5,
+      "ytd_actual": 109536.0,
+      "ytd_budget": 134292.0,
+      "annual_budget": 134292.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Mallard Cove",
+      "gl_code": "41-4100-00",
+      "month_actual": 75.0,
+      "month_budget": 0.0,
+      "ytd_actual": 42.64,
+      "ytd_budget": 900.0,
+      "annual_budget": 450.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Delinquent Fee Income",
+      "gl_code": "4600-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 750.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 750.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Collection Admin Fee Income",
+      "gl_code": "4605-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 19.0,
+      "ytd_budget": 48.0,
+      "annual_budget": 48.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Field day Credit Donations",
+      "gl_code": "43-4300-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 29.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 29.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Mgmt Contract",
+      "gl_code": "5000-00",
+      "month_actual": 824.0,
+      "month_budget": 824.0,
+      "ytd_actual": 4848.0,
+      "ytd_budget": 9792.0,
+      "annual_budget": 4848.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Postage - Mailings",
+      "gl_code": "5010-00",
+      "month_actual": 25.0,
+      "month_budget": 57.0,
+      "ytd_actual": 314.6,
+      "ytd_budget": 450.0,
+      "annual_budget": 150.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Printing",
+      "gl_code": "5020-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 12.25,
+      "ytd_budget": 150.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Taxes & Fees",
+      "gl_code": "5050-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 2.08,
+      "ytd_budget": 20.0,
+      "annual_budget": 20.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Misc Admin Expense",
+      "gl_code": "5085-00",
+      "month_actual": 0.0,
+      "month_budget": 450.0,
+      "ytd_actual": 600.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Social/Activities Expense",
+      "gl_code": "5087-00",
+      "month_actual": 291.67,
+      "month_budget": 0.0,
+      "ytd_actual": 156.98,
+      "ytd_budget": 3500.0,
+      "annual_budget": 1750.02,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Field Day Work Credits",
+      "gl_code": "5600-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 495.0,
+      "annual_budget": 495.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Insurance Expense",
+      "gl_code": "5045-00",
+      "month_actual": 359.0,
+      "month_budget": 0.0,
+      "ytd_actual": 326.03,
+      "ytd_budget": 1937.0,
+      "annual_budget": 359.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Insurance - General Liability",
+      "gl_code": "5046-00",
+      "month_actual": 1200.0,
+      "month_budget": 1210.33,
+      "ytd_actual": 2644.33,
+      "ytd_budget": 1200.0,
+      "annual_budget": 1200.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Legal General",
+      "gl_code": "5100-00",
+      "month_actual": 375.0,
+      "month_budget": 347.17,
+      "ytd_actual": 547.17,
+      "ytd_budget": 4500.0,
+      "annual_budget": 2250.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Audit/Tax Preparation",
+      "gl_code": "5152-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 290.0,
+      "ytd_budget": 370.0,
+      "annual_budget": 370.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Electricity",
+      "gl_code": "5500-00",
+      "month_actual": 208.33,
+      "month_budget": 0.0,
+      "ytd_actual": 1032.84,
+      "ytd_budget": 2500.0,
+      "annual_budget": 1249.98,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Water/Sewer",
+      "gl_code": "5510-00",
+      "month_actual": 958.33,
+      "month_budget": 0.0,
+      "ytd_actual": 4626.91,
+      "ytd_budget": 11500.0,
+      "annual_budget": 5749.98,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Mallard Cove- Water Bill",
+      "gl_code": "5511-00",
+      "month_actual": 41.67,
+      "month_budget": 0.0,
+      "ytd_actual": 356.96,
+      "ytd_budget": 500.0,
+      "annual_budget": 250.02,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Lake/Pond  Management",
+      "gl_code": "6100-00",
+      "month_actual": 500.0,
+      "month_budget": 683.18,
+      "ytd_actual": 3206.23,
+      "ytd_budget": 6000.0,
+      "annual_budget": 3000.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Fountain Maintenance / Repair",
+      "gl_code": "6763-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 4170.84,
+      "ytd_budget": 600.0,
+      "annual_budget": 300.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape/Grounds Contract",
+      "gl_code": "5400-00",
+      "month_actual": 3829.96,
+      "month_budget": 4600.0,
+      "ytd_actual": 27600.0,
+      "ytd_budget": 34170.04,
+      "annual_budget": 55200.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape Other (Unplanned)",
+      "gl_code": "5420-00",
+      "month_actual": 0.0,
+      "month_budget": 100.0,
+      "ytd_actual": 600.0,
+      "ytd_budget": 600.0,
+      "annual_budget": 1200.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape Planned",
+      "gl_code": "5425-00",
+      "month_actual": 0.0,
+      "month_budget": 416.67,
+      "ytd_actual": 2500.02,
+      "ytd_budget": 2371.77,
+      "annual_budget": 5000.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Tree Maintenance",
+      "gl_code": "5426-00",
+      "month_actual": 1000.0,
+      "month_budget": 1082.5,
+      "ytd_actual": 6495.0,
+      "ytd_budget": 8290.0,
+      "annual_budget": 12990.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Fertilizer, Weed, and Pest",
+      "gl_code": "5430-00",
+      "month_actual": 0.0,
+      "month_budget": 933.33,
+      "ytd_actual": 5599.98,
+      "ytd_budget": 5494.13,
+      "annual_budget": 11200.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Grass Maintenance",
+      "gl_code": "5440-00",
+      "month_actual": 0.0,
+      "month_budget": 89.83,
+      "ytd_actual": 538.98,
+      "ytd_budget": 538.98,
+      "annual_budget": 1078.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Irrigation Maintenance / Repair",
+      "gl_code": "5456-00",
+      "month_actual": 0.0,
+      "month_budget": 208.33,
+      "ytd_actual": 1249.98,
+      "ytd_budget": 1249.98,
+      "annual_budget": 2500.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "General Maintenance / Repair",
+      "gl_code": "5752-00",
+      "month_actual": 0.0,
+      "month_budget": 83.33,
+      "ytd_actual": 499.98,
+      "ytd_budget": 330.02,
+      "annual_budget": 1000.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Plumbing Maintenance / Repair",
+      "gl_code": "5795-00",
+      "month_actual": 0.0,
+      "month_budget": 0.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 81.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Reserve Contribution",
+      "gl_code": "8500-00",
+      "month_actual": 125.83,
+      "month_budget": 125.83,
+      "ytd_actual": 754.98,
+      "ytd_budget": 754.98,
+      "annual_budget": 1510.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Bank Interest Reserve",
+      "gl_code": "4710-00",
+      "month_actual": 31.4,
+      "month_budget": 0.0,
+      "ytd_actual": 177.41,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Reserve Contribution Income",
+      "gl_code": "49-4900-00",
+      "month_actual": 125.83,
+      "month_budget": 125.83,
+      "ytd_actual": 754.98,
+      "ytd_budget": 1510.0,
+      "annual_budget": 1510.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Assessment General",
+      "gl_code": "40-4000-00",
+      "month_actual": 4950.5,
+      "month_budget": 134292.0,
+      "ytd_actual": 4950.5,
+      "ytd_budget": 134292.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Mallard Cove",
+      "gl_code": "41-4100-00",
+      "month_actual": 0.0,
+      "month_budget": 900.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 900.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Delinquent Fee Income",
+      "gl_code": "42-4600-00",
+      "month_actual": -27.0,
+      "month_budget": 0.0,
+      "ytd_actual": -27.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Collection Admin Fee Income",
+      "gl_code": "42-4605-00",
+      "month_actual": 19.0,
+      "month_budget": 0.0,
+      "ytd_actual": 19.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Mgmt Contract",
+      "gl_code": "50-5000-00",
+      "month_actual": 824.0,
+      "month_budget": 9792.0,
+      "ytd_actual": 824.0,
+      "ytd_budget": 9792.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Postage - Mailings",
+      "gl_code": "50-5010-00",
+      "month_actual": 57.0,
+      "month_budget": 450.0,
+      "ytd_actual": 57.0,
+      "ytd_budget": 450.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Printing",
+      "gl_code": "50-5020-00",
+      "month_actual": 0.0,
+      "month_budget": 150.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 150.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Taxes & Fees",
+      "gl_code": "51-5050-00",
+      "month_actual": 0.0,
+      "month_budget": 20.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 20.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Misc Admin Expense",
+      "gl_code": "51-5085-00",
+      "month_actual": 450.0,
+      "month_budget": 0.0,
+      "ytd_actual": 450.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Social/Activities Expense",
+      "gl_code": "51-5087-00",
+      "month_actual": 0.0,
+      "month_budget": 3500.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 3500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Field Day Work Credits",
+      "gl_code": "51-5600-00",
+      "month_actual": 0.0,
+      "month_budget": 495.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 495.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Insurance Expense",
+      "gl_code": "52-5045-00",
+      "month_actual": 0.0,
+      "month_budget": 1937.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 1937.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Insurance - General Liability",
+      "gl_code": "52-5046-00",
+      "month_actual": 1210.33,
+      "month_budget": 1200.0,
+      "ytd_actual": 1210.33,
+      "ytd_budget": 1200.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Legal General",
+      "gl_code": "54-5100-00",
+      "month_actual": 347.17,
+      "month_budget": 4500.0,
+      "ytd_actual": 347.17,
+      "ytd_budget": 4500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Audit/Tax Preparation",
+      "gl_code": "54-5152-00",
+      "month_actual": 0.0,
+      "month_budget": 370.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 370.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Electricity",
+      "gl_code": "58-5500-00",
+      "month_actual": 0.0,
+      "month_budget": 2500.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 2500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Water/Sewer",
+      "gl_code": "58-5510-00",
+      "month_actual": 0.0,
+      "month_budget": 11500.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 11500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Mallard Cove- Water Bill",
+      "gl_code": "58-5511-00",
+      "month_actual": 0.0,
+      "month_budget": 500.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Lake/Pond  Management",
+      "gl_code": "61-6100-00",
+      "month_actual": 683.18,
+      "month_budget": 6000.0,
+      "ytd_actual": 683.18,
+      "ytd_budget": 6000.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Fountain Maintenance / Repair",
+      "gl_code": "61-6763-00",
+      "month_actual": 0.0,
+      "month_budget": 600.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 600.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape/Grounds Contract",
+      "gl_code": "63-5400-00",
+      "month_actual": -3829.96,
+      "month_budget": 55200.0,
+      "ytd_actual": -3829.96,
+      "ytd_budget": 55200.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape Other (Unplanned)",
+      "gl_code": "63-5420-00",
+      "month_actual": 0.0,
+      "month_budget": 1200.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 1200.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Landscape Planned",
+      "gl_code": "63-5425-00",
+      "month_actual": 0.0,
+      "month_budget": 5000.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 5000.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Tree Maintenance",
+      "gl_code": "63-5426-00",
+      "month_actual": 1000.0,
+      "month_budget": 12990.0,
+      "ytd_actual": 1000.0,
+      "ytd_budget": 12990.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Fertilizer, Weed, and Pest",
+      "gl_code": "63-5430-00",
+      "month_actual": 0.0,
+      "month_budget": 11200.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 11200.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Grass Maintenance",
+      "gl_code": "63-5440-00",
+      "month_actual": 0.0,
+      "month_budget": 1078.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 1078.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Irrigation Maintenance / Repair",
+      "gl_code": "63-5456-00",
+      "month_actual": 0.0,
+      "month_budget": 2500.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 2500.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "General Maintenance / Repair",
+      "gl_code": "64-5752-00",
+      "month_actual": 0.0,
+      "month_budget": 1000.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Reserve Contribution",
+      "gl_code": "85-8500-00",
+      "month_actual": 125.83,
+      "month_budget": 1510.0,
+      "ytd_actual": 0.0,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "EXPENSE"
+    },
+    {
+      "category": "Bank Interest Reserve",
+      "gl_code": "42-4710-00",
+      "month_actual": 31.4,
+      "month_budget": 0.0,
+      "ytd_actual": 31.4,
+      "ytd_budget": 0.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    },
+    {
+      "category": "Reserve Contribution Income",
+      "gl_code": "49-4900-00",
+      "month_actual": 125.83,
+      "month_budget": 1510.0,
+      "ytd_actual": 157.23,
+      "ytd_budget": 1510.0,
+      "annual_budget": 0.0,
+      "type": "INCOME"
+    }
+  ],
+  "pdf": "2025.06 Briarwyck Monthly Financials"
+}
