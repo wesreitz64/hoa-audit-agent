@@ -90,8 +90,58 @@ export default function DataWarehouse() {
   const availableVendors = Array.from(new Set(data.vendorInvoices?.map((v: any) => v.vendor_name))).filter(Boolean).sort();
 
   // Filter Data based on Modes
-  const filteredIncome = viewMode === 'month' ? (data.incomeStatements?.filter((i: any) => i.period === selectedPeriod) || []) : [];
-  const filteredVendorsByMonth = viewMode === 'month' ? (data.vendorInvoices?.filter((v: any) => v.period === selectedPeriod) || []) : [];
+  let filteredIncome: any[] = [];
+  let filteredVendorsByMonth: any[] = [];
+  
+  if (viewMode === 'month') {
+    const rawIncome = data.incomeStatements || [];
+    const useDateRange = startDate || endDate;
+    
+    let validIncome = rawIncome.filter((i: any) => {
+      if (useDateRange) {
+        const itemDate = new Date(`1 ${i.period}`).getTime();
+        const start = startDate ? new Date(startDate).getTime() : 0;
+        const end = endDate ? new Date(endDate).getTime() + 86400000 : Infinity;
+        return itemDate >= start && itemDate <= end;
+      }
+      return i.period === selectedPeriod;
+    });
+
+    if (useDateRange) {
+      const agg = new Map<string, any>();
+      validIncome.forEach((i: any) => {
+        const key = i.gl_code + '_' + i.type;
+        if (!agg.has(key)) {
+          agg.set(key, { ...i, month_actual: 0, month_budget: 0 });
+        }
+        const curr = agg.get(key);
+        curr.month_actual += i.month_actual;
+        curr.month_budget += i.month_budget;
+        
+        const currD = new Date(`1 ${curr.period}`).getTime();
+        const newD = new Date(`1 ${i.period}`).getTime();
+        if (newD > currD) {
+          curr.period = i.period;
+          curr.ytd_actual = i.ytd_actual;
+          curr.annual_budget = i.annual_budget;
+          curr.variance = i.variance;
+        }
+      });
+      filteredIncome = Array.from(agg.values());
+    } else {
+      filteredIncome = validIncome;
+    }
+
+    filteredVendorsByMonth = (data.vendorInvoices || []).filter((v: any) => {
+      if (useDateRange) {
+        const itemDate = new Date(v.invoice_date || `1 ${v.period}`).getTime();
+        const start = startDate ? new Date(startDate).getTime() : 0;
+        const end = endDate ? new Date(endDate).getTime() + 86400000 : Infinity;
+        return itemDate >= start && itemDate <= end;
+      }
+      return v.period === selectedPeriod;
+    });
+  }
   
   const incomeCategories = filteredIncome.filter((i: any) => i.type === 'INCOME');
   const expenseCategories = filteredIncome.filter((i: any) => i.type === 'EXPENSE');
@@ -181,7 +231,7 @@ export default function DataWarehouse() {
               </div>
               <p className="text-slate-600 pl-1 print:text-slate-700">
                 {viewMode === 'month' 
-                  ? <>Ledger Integration • Period: <strong className="text-slate-900 print:text-black">{selectedPeriod}</strong></> 
+                  ? <>Ledger Integration • Period: <strong className="text-slate-900 print:text-black">{(startDate || endDate) ? 'Custom Range' : selectedPeriod}</strong></> 
                   : <>Cross-Period Auditing • Vendor: <strong className="text-slate-900 print:text-black">{selectedVendor}</strong></>}
               </p>
             </div>
@@ -201,15 +251,47 @@ export default function DataWarehouse() {
               </div>
 
               {viewMode === 'month' ? (
-                <select 
-                  value={selectedPeriod}
-                  onChange={(e) => setSelectedPeriod(e.target.value)}
-                  className="bg-white border border-slate-200 rounded-lg px-4 py-2 text-sm text-slate-900 focus:outline-none appearance-none cursor-pointer hover:bg-slate-100 transition-colors"
-                >
-                  {availablePeriods.map(p => (
-                    <option key={String(p)} value={String(p)}>{String(p)}</option>
-                  ))}
-                </select>
+                <div className="flex items-center gap-2">
+                  <select 
+                    value={selectedPeriod}
+                    onChange={(e) => {
+                      setSelectedPeriod(e.target.value);
+                      setStartDate('');
+                      setEndDate('');
+                    }}
+                    className="bg-white border border-slate-200 rounded-lg px-4 py-2 text-sm text-slate-900 focus:outline-none appearance-none cursor-pointer hover:bg-slate-100 transition-colors"
+                  >
+                    {availablePeriods.map(p => (
+                      <option key={String(p)} value={String(p)}>{String(p)}</option>
+                    ))}
+                  </select>
+                  
+                  <div className="h-6 w-px bg-slate-200 mx-1"></div>
+                  
+                  <div className="flex items-center gap-2 bg-white border border-slate-200 rounded-lg px-3 py-1">
+                    <input 
+                      type="date" 
+                      value={startDate} 
+                      onChange={(e) => { setStartDate(e.target.value); setSelectedPeriod(''); }} 
+                      className="bg-transparent text-sm text-slate-700 focus:outline-none focus:text-blue-600 [&::-webkit-calendar-picker-indicator]:invert-[0.6] cursor-pointer"
+                    />
+                    <span className="text-slate-600 text-xs">to</span>
+                    <input 
+                      type="date" 
+                      value={endDate} 
+                      onChange={(e) => { setEndDate(e.target.value); setSelectedPeriod(''); }} 
+                      className="bg-transparent text-sm text-slate-700 focus:outline-none focus:text-blue-600 [&::-webkit-calendar-picker-indicator]:invert-[0.6] cursor-pointer"
+                    />
+                    {(startDate || endDate) && (
+                      <button 
+                        onClick={() => { setStartDate(''); setEndDate(''); setSelectedPeriod(availablePeriods[0] as string); }}
+                        className="ml-2 text-red-600/70 hover:text-red-600 text-xs transition-colors"
+                      >
+                        Clear
+                      </button>
+                    )}
+                  </div>
+                </div>
               ) : (
                 <div className="flex items-center gap-2">
                   <select 
@@ -287,8 +369,8 @@ export default function DataWarehouse() {
                 <thead className="bg-slate-50 text-slate-600 uppercase text-[10px] tracking-wider sticky top-0 z-10 box-border print:bg-white print:text-black border-b border-slate-200 print:border-black">
                 <tr>
                   <th className="px-6 py-4 print:px-2 print:py-2 font-semibold w-1/4">GL Category / Vendor</th>
-                  <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Month Actual</th>
-                  <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Month Budget</th>
+                  <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Period Actual</th>
+                  <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Period Budget</th>
                   <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">YTD Actual</th>
                   <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Annual Budget</th>
                   <th className="px-6 py-4 print:px-2 print:py-2 font-semibold text-right">Variance</th>
