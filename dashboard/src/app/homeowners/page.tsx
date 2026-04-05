@@ -226,10 +226,10 @@ export default function HomeownersPage() {
             )}
           </div>
 
-          <div className="overflow-x-auto p-0 [&::-webkit-scrollbar]:h-3 [&::-webkit-scrollbar-track]:bg-slate-50 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full pb-4 mb-2">
+          <div className="overflow-auto max-h-[70vh] p-0 [&::-webkit-scrollbar]:w-3 [&::-webkit-scrollbar]:h-3 [&::-webkit-scrollbar-track]:bg-slate-50 [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar-thumb]:rounded-full pb-4">
             {viewMode === 'trace' ? (
-              <table className="w-full text-left text-sm text-slate-700 border-collapse">
-                <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase text-[10px] tracking-widest font-semibold sticky top-0 z-10">
+              <table className="w-full text-left text-sm text-slate-700 border-collapse relative">
+                <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 uppercase text-[10px] tracking-widest font-semibold sticky top-0 z-30 shadow-sm">
                   <tr>
                     <th className="px-6 py-4">Accounting Period</th>
                     <th className="px-6 py-4 text-right">Prev Balance</th>
