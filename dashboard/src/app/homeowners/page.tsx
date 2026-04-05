@@ -28,6 +28,8 @@ export default function HomeownersPage() {
   const [viewMode, setViewMode] = useState<'trace' | 'delinquency'>('trace');
   const [selectedUnit, setSelectedUnit] = useState<string>('');
   const [search, setSearch] = useState('');
+  const [startPeriod, setStartPeriod] = useState<string>('');
+  const [endPeriod, setEndPeriod] = useState<string>('');
 
   useEffect(() => {
     fetch('/api/homeowner-records')
@@ -70,6 +72,12 @@ export default function HomeownersPage() {
 
   // --- TRACE MODE DATA ---
   let traceData = records.filter(r => r.unit_id === selectedUnit);
+  if (startPeriod) {
+    traceData = traceData.filter(r => parsePeriod(r.period) >= parsePeriod(startPeriod));
+  }
+  if (endPeriod) {
+    traceData = traceData.filter(r => parsePeriod(r.period) <= parsePeriod(endPeriod));
+  }
   traceData = traceData.sort((a, b) => parsePeriod(a.period) - parsePeriod(b.period));
 
   // --- DELINQUENCY MAP DATA ---
@@ -166,6 +174,34 @@ export default function HomeownersPage() {
                         <option key={unit} value={unit}>{unit} - {name.substring(0,25)}</option>
                       ))}
                     </select>
+                  </div>
+                  
+                  <div className="w-px h-10 bg-slate-200 mx-2 hidden lg:block"></div>
+                  
+                  <div className="hidden md:flex gap-4">
+                    <div className="flex flex-col">
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">From Period</label>
+                      <select 
+                        value={startPeriod}
+                        onChange={(e) => setStartPeriod(e.target.value)}
+                        className="bg-slate-50 border border-slate-200 shadow-inner rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">-- All --</option>
+                        {allPeriods.map(p => <option key={p} value={p as string}>{p}</option>)}
+                      </select>
+                    </div>
+                    
+                    <div className="flex flex-col">
+                      <label className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">To Period</label>
+                      <select 
+                        value={endPeriod}
+                        onChange={(e) => setEndPeriod(e.target.value)}
+                        className="bg-slate-50 border border-slate-200 shadow-inner rounded-xl px-4 py-2.5 text-sm font-medium text-slate-800 focus:outline-none focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100 transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">-- All --</option>
+                        {allPeriods.map(p => <option key={p} value={p as string}>{p}</option>)}
+                      </select>
+                    </div>
                   </div>
                 </>
               ) : (
