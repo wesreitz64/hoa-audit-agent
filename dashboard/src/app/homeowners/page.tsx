@@ -261,14 +261,14 @@ export default function HomeownersPage() {
                 </tbody>
               </table>
             ) : (
-              <table className="w-full text-left text-sm text-slate-700 border-collapse">
-                <thead className="bg-[#1A1F2C] text-slate-300 uppercase text-[10px] tracking-widest font-semibold sticky top-0 z-10 border-b border-white/10">
+              <table className="w-full text-left text-sm text-slate-700 border-separate border-spacing-0">
+                <thead className="bg-[#1A1F2C] text-slate-300 uppercase text-[10px] tracking-widest font-semibold sticky top-0 z-30">
                   <tr>
-                    <th className="px-6 py-4 border-r border-white/5 bg-[#1A1F2C] sticky left-0 z-20">Unit & Resident</th>
+                    <th className="px-6 py-4 border-r border-b border-white/5 bg-[#1A1F2C] sticky left-0 z-40">Unit & Resident</th>
                     {allPeriods.map(p => {
                       const parts = p.split(' ');
                       return (
-                        <th key={p} className="px-4 py-4 text-right whitespace-nowrap min-w-[100px]">
+                        <th key={p} className="px-4 py-4 border-b border-white/10 text-right whitespace-nowrap min-w-[100px] bg-[#1A1F2C]">
                           {parts[0].slice(0,3)} '{parts[1].slice(-2)}
                         </th>
                       )
@@ -278,7 +278,7 @@ export default function HomeownersPage() {
                 <tbody className="divide-y divide-slate-100 bg-white">
                   {delinquencyRows.map((r, idx) => (
                     <tr key={idx} className="hover:bg-red-50/30 transition-colors">
-                      <td className="px-6 py-3 border-r border-slate-100 bg-white sticky left-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)] z-10">
+                      <td className="px-6 py-3 border-r border-b border-slate-100 bg-white sticky left-0 shadow-[2px_0_5px_-2px_rgba(0,0,0,0.05)] z-20">
                         <div className="font-semibold text-slate-900">{r.unit_id} <span className="text-slate-400 font-normal ml-2">({r.total_delinquent_months} mo)</span></div>
                         <div className="text-xs text-slate-500 whitespace-nowrap overflow-hidden text-ellipsis max-w-[200px]">{r.name}</div>
                       </td>
@@ -297,7 +297,7 @@ export default function HomeownersPage() {
                           txColor = 'text-emerald-500/80';
                         }
                         return (
-                          <td key={p} className={`px-4 py-3 text-right font-mono text-xs border-r border-slate-50 ${txColor} ${bgColor}`}>
+                          <td key={p} className={`px-4 py-3 border-b border-slate-100 text-right font-mono text-xs border-r border-slate-50 ${txColor} ${bgColor}`}>
                             ${bal.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:2})}
                           </td>
                         )
