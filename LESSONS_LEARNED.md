@@ -635,4 +635,24 @@ To the user, the shell/terminal remains identical. It feels like one infinite lo
 
 ---
 
-*More lessons coming as we build the Web Dashboard...*
+## 25. The Vercel "GLIBC" Native Bindings Trap — Serverless SQL
+When deploying Next.js locally, `sqlite3` runs perfectly. Under the hood, NPM compiles the C++ `node-gyp` bindings to match your Windows or Mac machine. But when deploying to Vercel, the build executes inside a cutting-edge builder container, downloading Linux bindings (like `GLIBC_2.38`), and then deploys to a slower-moving Amazon Linux runtime at the Edge. The moment an API route tries to start SQLite: **Crash. `version 'GLIBC_2.38' not found`.**
+
+**The Fix:** You must strip out problematic C++ dependent packages like `sqlite3` and replace them with structurally sound packages like `better-sqlite3`. Additionally, you must explicitly tell Turbopack not to bundle the database driver into the browser bundle by adding `serverExternalPackages: ['better-sqlite3']` to `next.config.ts`. Next.js handles it natively, guaranteeing safe serverless data retrieval.
+
+**One-liner:** *"Just because it builds locally doesn't mean it will run on Vercel's serverless edge. Watch out for packages with C++ native bindings."*
+
+---
+
+## 26. The Vercel 404 "Framework Preset" Trap
+If you push a perfectly structured Next.js application to Vercel, but your Vercel Project Settings has **Framework Preset** set to `Other`, you will receive a confusing `404: NOT_FOUND` edge error despite a successful build. 
+
+Why? Because the `Other` preset treats the build as a standard static website generation. It bypasses all of Next.js's zero-config magic, ignores the `.next/` serverless output directory, and instead blindly maps the web root to a `public/` directory or literal source files, resulting in 0 serverless edge functions being mapped to `/`.
+
+**The Fix:** Literally just open the Vercel UI, change the Framework Preset dropdown to `Next.js`, and redeploy. 
+
+**One-liner:** *"Vercel's magic only works if you turn the magic on. Setting the 'Framework Preset' dictates the fundamental edge routing structure."*
+
+---
+
+*More lessons coming as we build Phase 3...*
