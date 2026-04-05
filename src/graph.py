@@ -563,6 +563,7 @@ def audit_node(state: AuditState) -> dict:
             
         final_json["all_invoices"] = state.get("invoice_list_items", [])
         final_json["income_statement"] = state.get("income_statement_items", [])
+        final_json["homeowner_records"] = state.get("homeowner_ledger", [])
         final_json["pdf"] = pdf_name
         
         with open(output_path, "w", encoding="utf-8") as f:

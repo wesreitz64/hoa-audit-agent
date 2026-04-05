@@ -1,0 +1,39 @@
+--- QUESTION 1: JOHN ORTIZ / PREPAIDS ---
+('January 2025', 'TPB50', 'John & Darcirae Ortiz', -85.0, 0.0, -85.0, 1)
+('April 2025', 'TPB93', 'John Hennessey', -3.0, 0.0, -3.0, 1)
+('February 2026', 'TPB50', 'John & Darcirae Ortiz', -1277.2, 0.0, -1277.2, 1)
+('February 2026', 'TPB50', 'John & Darcirae Ortiz', -1277.2, 0.0, -1277.2, 1)
+('February 2026', 'TPB50', 'John & Darcirae Ortiz', -1277.2, 0.0, -1277.2, 1)
+
+--- QUESTION 2: NEON MONKEY ---
+('February 2025', 'Neon Monkey LLC', 2000.0, '2025-02-14', '2025-02-24', 'Tree Maintenance')
+('April 2025', 'Neon Monkey LLC', 1000.0, '2025-04-01', '2025-04-16', 'Landscape/Grounds Contract')
+('May 2025', 'Neon Monkey LLC', 1000.0, '2025-05-02', '2025-05-15', '<UNKNOWN>')
+('May 2025', 'Neon Monkey LLC', 3485.0, '2025-05-20', '2025-05-22', 'Tree Maintenance')
+('June 2025', 'Neon Monkey LLC', 3485.0, '2025-05-20', '2025-06-18', 'Tree Maintenance')
+('July 2025', 'Neon Monkey LLC', 1000.0, '2025-07-20', '2025-07-29', 'Tree Maintenance')
+('September 2025', 'Neon Monkey LLC', 1000.0, '2025-08-26', '2025-09-03', 'Tree Maintenance')
+('October 2025', 'Neon Monkey LLC', 2000.0, '2025-09-23', '2025-10-14', 'Tree Maintenance')
+('December 2025', 'Neon Monkey LLC', 1000.0, '2025-11-24', '2025-12-01', 'Tree Maintenance')
+('January 2026', 'Neon Monkey LLC', 2000.0, '2025-12-21', '2026-01-05', 'Tree Maintenance')
+('February 2026', 'Neon Monkey LLC', 1000.0, '2026-02-20', '2026-02-27', 'Tree Maintenance')
+Total Paid to Neon Monkey: 18970.0
+
+--- QUESTION 3: FIELD DAY ---
+(42, 'May 2025', 'Wesley Reitz', '202556 FieldDay', '2025-05-08', '2025-05-15', 156.98, '51-5600-00', 'Field Day Work Credits', 'Check', 'Craig Smith, CMCA®', 12)
+(61, 'August 2025', 'Wesley Reitz', '2025515 Field Day', '2025-08-07', '2025-08-07', 605.62, '<UNKNOWN>', '<UNKNOWN>', 'Check', 'Holli Nugent', 10)
+
+--- QUESTION 4: $1000 DEP JUNE/JULY ---
+('June 2025', 'Tree Maintenance', 1000.0)
+('June 2025', 'Tree Maintenance', 1000.0)
+('July 2025', 'Tree Maintenance', 1000.0)
+('July 2025', 'Tree Maintenance', 1000.0)
+('September 2025', 'Tree Maintenance', 1000.0)
+('December 2025', 'Tree Maintenance', 1000.0)
+('February 2026', 'Tree Maintenance', 1000.0)
+('Neon Monkey LLC', 1000.0, 'April 2025')
+('Neon Monkey LLC', 1000.0, 'May 2025')
+('Neon Monkey LLC', 1000.0, 'July 2025')
+('Neon Monkey LLC', 1000.0, 'September 2025')
+('Neon Monkey LLC', 1000.0, 'December 2025')
+('Neon Monkey LLC', 1000.0, 'February 2026')

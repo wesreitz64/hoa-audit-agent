@@ -59,6 +59,24 @@ def create_database():
         FOREIGN KEY(period) REFERENCES monthly_summary(period)
     )''')
     
+    # Table for full homeowner records (100% extracted rows)
+    cursor.execute("DROP TABLE IF EXISTS homeowner_records")
+    cursor.execute('''
+    CREATE TABLE homeowner_records (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        period TEXT,
+        unit_id TEXT,
+        homeowner_name TEXT,
+        owner_type TEXT,
+        prev_balance REAL,
+        billing REAL,
+        receipts REAL,
+        adjustments REAL,
+        prepaid REAL,
+        ending_balance REAL,
+        FOREIGN KEY(period) REFERENCES monthly_summary(period)
+    )''')
+    
     # Table for full Income Statement (Budget vs Actual) YTD
     cursor.execute("DROP TABLE IF EXISTS income_statement_ytd")
     cursor.execute('''
@@ -100,6 +118,7 @@ def create_database():
     cursor.execute("DELETE FROM unapproved_checks")
     cursor.execute("DELETE FROM pending_invoices")
     cursor.execute("DELETE FROM homeowner_anomalies")
+    cursor.execute("DELETE FROM homeowner_records")
     cursor.execute("DELETE FROM income_statement_ytd")
     cursor.execute("DELETE FROM all_invoices")
 
@@ -172,6 +191,24 @@ def ingest_jsons():
                 anom.get("computed_ending", 0.0),
                 anom.get("difference", 0.0),
                 anom.get("has_prepaid_carryforward", False)
+            ))
+            
+        # Insert ALL Homeowner Records
+        records = data.get("homeowner_records", [])
+        for rec in records:
+            cursor.execute('''
+            INSERT INTO homeowner_records (period, unit_id, homeowner_name, owner_type, prev_balance, billing, receipts, adjustments, prepaid, ending_balance)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''', (
+                period,
+                rec.get("unit_id", ""),
+                rec.get("homeowner_name", ""),
+                rec.get("owner_type", ""),
+                rec.get("prev_balance", 0.0),
+                rec.get("billing", 0.0),
+                rec.get("receipts", 0.0),
+                rec.get("adjustments", 0.0),
+                rec.get("prepaid", 0.0),
+                rec.get("ending_balance", 0.0)
             ))
             
         # Insert ALL Invoices

@@ -131,6 +131,10 @@ export default function Dashboard() {
           </div>
           <div className="text-right">
             <div className="flex items-center gap-4 mb-3">
+              <a href="/homeowners" className="px-4 py-2 text-sm font-medium bg-slate-100 hover:bg-slate-200 text-indigo-600 border border-indigo-300 rounded-lg transition-colors flex items-center gap-2">
+                <Users className="w-4 h-4" />
+                Homeowner AR
+              </a>
               <a href="/data-warehouse" className="px-4 py-2 text-sm font-medium bg-slate-100 hover:bg-slate-200 text-blue-600 border border-blue-300 rounded-lg transition-colors flex items-center gap-2">
                 <FileSearch className="w-4 h-4" />
                 Data Warehouse

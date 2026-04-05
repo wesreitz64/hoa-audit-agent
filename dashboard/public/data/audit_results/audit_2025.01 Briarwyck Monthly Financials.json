@@ -842,5 +842,1374 @@
       "type": "INCOME"
     }
   ],
-  "pdf": "2025.01 Briarwyck Monthly Financials"
+  "pdf": "2025.01 Briarwyck Monthly Financials",
+  "homeowner_records": [
+    {
+      "unit_id": "TPB01",
+      "homeowner_name": "Domingos Norah",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB02",
+      "homeowner_name": "Mary Ann Best",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1350.0,
+      "adjustments": -10.0,
+      "prepaid": 0.0,
+      "ending_balance": 4.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB03",
+      "homeowner_name": "Ann & Charles Bragg",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB04",
+      "homeowner_name": "Elizabeth Parker-Teal",
+      "owner_type": "Owner",
+      "prev_balance": 127.0,
+      "billing": 124.0,
+      "receipts": -118.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 133.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB05",
+      "homeowner_name": "Stephen & Kathy Thomas",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB06",
+      "homeowner_name": "Jeanne Stephens",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB07",
+      "homeowner_name": "Titan Chijioke",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB08",
+      "homeowner_name": "Kelly L. Bates",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB09",
+      "homeowner_name": "Denise  Bays",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        46
+      ]
+    },
+    {
+      "unit_id": "TPB10",
+      "homeowner_name": "Stephan Daniels",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": -10.0,
+      "prepaid": 0.0,
+      "ending_balance": 114.0,
+      "source_pages": [
+        46,
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB11",
+      "homeowner_name": "Stephan Daniels",
+      "owner_type": "Owner",
+      "prev_balance": 364.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 488.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB12",
+      "homeowner_name": "Dan & Bettie Railford",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB13",
+      "homeowner_name": "Brad Steward",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -114.0,
+      "adjustments": -10.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB14",
+      "homeowner_name": "Jack & Julie Nisula",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB15",
+      "homeowner_name": "Marty French",
+      "owner_type": "Owner",
+      "prev_balance": -496.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 124.0,
+      "ending_balance": -372.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB16",
+      "homeowner_name": "Sandra Myers",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB17",
+      "homeowner_name": "Mary Ruth Montgomery",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -124.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB18",
+      "homeowner_name": "Debra Thompson",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        47
+      ]
+    },
+    {
+      "unit_id": "TPB19",
+      "homeowner_name": "Kathy Kiser",
+      "owner_type": "Owner",
+      "prev_balance": 774.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 898.0,
+      "source_pages": [
+        47,
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB20",
+      "homeowner_name": "Erin Buck",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -118.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 6.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB21",
+      "homeowner_name": "Gregory Boisse",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -124.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB22",
+      "homeowner_name": "Wesley Reitz",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": 0.0,
+      "adjustments": -80.0,
+      "prepaid": 0.0,
+      "ending_balance": 1284.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB23",
+      "homeowner_name": "Elenora Livschitz",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1349.0,
+      "adjustments": -15.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB24",
+      "homeowner_name": "David & Melinde Waddle",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB25",
+      "homeowner_name": "Daniel Killian",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB26",
+      "homeowner_name": "Nahid Dalili & Sasha Sadighi Nouri",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB27",
+      "homeowner_name": "Laura Barrett",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 124.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB28",
+      "homeowner_name": "Wendy Pedrero & Jennifer Williams",
+      "owner_type": "Owner",
+      "prev_balance": -1374.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": -10.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB29",
+      "homeowner_name": "Trisha Tatman & Jeremy Skinner",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1334.0,
+      "adjustments": -30.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48
+      ]
+    },
+    {
+      "unit_id": "TPB30",
+      "homeowner_name": "Brian Gierhart",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        48,
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB31",
+      "homeowner_name": "Stacy & Raina Mills",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -124.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB32",
+      "homeowner_name": "Stan & Carlene Foreman",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB33",
+      "homeowner_name": "Carolyn & Lee Nell",
+      "owner_type": "Owner",
+      "prev_balance": -124.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -124.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB34",
+      "homeowner_name": "Carol Moore",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB35",
+      "homeowner_name": "Margaret Haven",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1349.0,
+      "adjustments": -15.0,
+      "prepaid": 0.0,
+      "ending_balance": -16.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB36",
+      "homeowner_name": "Gary & Gwynne Schweiker",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB37",
+      "homeowner_name": "Bruce Richards",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB38",
+      "homeowner_name": "Richard Amoedo & Neva Brunson",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -104.0,
+      "adjustments": -20.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB39",
+      "homeowner_name": "Roy Dean Farris, Jr.",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        49
+      ]
+    },
+    {
+      "unit_id": "TPB40",
+      "homeowner_name": "Shirley Wilkerson",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": -20.0,
+      "prepaid": 0.0,
+      "ending_balance": 104.0,
+      "source_pages": [
+        49,
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB41",
+      "homeowner_name": "Rachael Jacobs",
+      "owner_type": "Owner",
+      "prev_balance": -236.0,
+      "billing": 124.0,
+      "receipts": -109.0,
+      "adjustments": -15.0,
+      "prepaid": 0.0,
+      "ending_balance": -245.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB42",
+      "homeowner_name": "Beverly Hebert",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1359.0,
+      "adjustments": -5.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB43",
+      "homeowner_name": "Lois Woltmann",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": 0.0,
+      "adjustments": -15.0,
+      "prepaid": 0.0,
+      "ending_balance": 1349.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB44",
+      "homeowner_name": "Loretta Seibold",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB45",
+      "homeowner_name": "Jessica Martin",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -118.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 6.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB46",
+      "homeowner_name": "Mireya Rios-Salas",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB47",
+      "homeowner_name": "Fred Cook",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB48",
+      "homeowner_name": "Leslie Oschmann",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB49",
+      "homeowner_name": "Greg & Janie Kuiper",
+      "owner_type": "Owner",
+      "prev_balance": -64.0,
+      "billing": 1364.0,
+      "receipts": -1304.0,
+      "adjustments": -60.0,
+      "prepaid": 4.0,
+      "ending_balance": -60.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB50",
+      "homeowner_name": "John & Darcirae Ortiz",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1279.0,
+      "adjustments": -85.0,
+      "prepaid": 0.0,
+      "ending_balance": -85.0,
+      "source_pages": [
+        50
+      ]
+    },
+    {
+      "unit_id": "TPB51",
+      "homeowner_name": "Eileen  Turner",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        50,
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB52",
+      "homeowner_name": "Jameelah Reid",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -124.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB53",
+      "homeowner_name": "Gerry & Charlene Keller",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB54",
+      "homeowner_name": "Trevo Inman & Christy Cole",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB55",
+      "homeowner_name": "Jose Enrique Angulo",
+      "owner_type": "Owner",
+      "prev_balance": 596.0,
+      "billing": 124.0,
+      "receipts": -108.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 612.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB56",
+      "homeowner_name": "Janet Domaracki",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1349.0,
+      "adjustments": -15.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB57",
+      "homeowner_name": "Emily and Royce  McIntosh",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 124.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB58",
+      "homeowner_name": "Amanda Phillips",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": 0.0,
+      "adjustments": -1364.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB59",
+      "homeowner_name": "Ellen Mahon",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -118.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 6.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB60",
+      "homeowner_name": "Chris & Mimi Scarpulla",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51
+      ]
+    },
+    {
+      "unit_id": "TPB61",
+      "homeowner_name": "Joe & Helen Betts",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        51,
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB62",
+      "homeowner_name": "Robert & Dianne Guthrie",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB63",
+      "homeowner_name": "Casey Jaggars",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB64",
+      "homeowner_name": "Richard Williams & Lorraine Ringholm",
+      "owner_type": "Owner",
+      "prev_balance": 1142.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 1266.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB65",
+      "homeowner_name": "Jackson  Wernli & Corinne  Blangy",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": -55.0,
+      "prepaid": 0.0,
+      "ending_balance": 69.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB66",
+      "homeowner_name": "Jill Jaggars",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB67",
+      "homeowner_name": "Evelyn Murphy",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB68",
+      "homeowner_name": "Janice Masters",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB69",
+      "homeowner_name": "Terri Atkinson",
+      "owner_type": "Owner",
+      "prev_balance": -248.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": -248.0,
+      "source_pages": [
+        52
+      ]
+    },
+    {
+      "unit_id": "TPB70",
+      "homeowner_name": "Debbie Hawks",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        52,
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB71",
+      "homeowner_name": "Joyce Frazier",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB72",
+      "homeowner_name": "Erika Erikson",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB73",
+      "homeowner_name": "Cindy Kaiser",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB74",
+      "homeowner_name": "Rebecca Kirkpatrick",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB75",
+      "homeowner_name": "Benjamin & Shannon Lough",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB76",
+      "homeowner_name": "Tanner & Chrstina Phillips",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB77",
+      "homeowner_name": "Vilma  Gilberg & Lance  Scott",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB78",
+      "homeowner_name": "Susan Parker",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB79",
+      "homeowner_name": "Elisabeth Finks",
+      "owner_type": "Owner",
+      "prev_balance": -124.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 124.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB80",
+      "homeowner_name": "Camdi Ton",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53
+      ]
+    },
+    {
+      "unit_id": "TPB81",
+      "homeowner_name": "Joe Krismer",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        53,
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB82",
+      "homeowner_name": "Vadium Vostrikov",
+      "owner_type": "Owner",
+      "prev_balance": -124.0,
+      "billing": 124.0,
+      "receipts": -124.0,
+      "adjustments": 0.0,
+      "prepaid": 124.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB83",
+      "homeowner_name": "Susan & Andrew Smolenski",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB84",
+      "homeowner_name": "Leah Huffer",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB85",
+      "homeowner_name": "Gary & Patricia McCool",
+      "owner_type": "Owner",
+      "prev_balance": -1364.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 1364.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB86",
+      "homeowner_name": "Beth Shutz",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": -30.0,
+      "prepaid": 0.0,
+      "ending_balance": 94.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB87",
+      "homeowner_name": "Lara McCluer",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 124.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB88",
+      "homeowner_name": "Rebecca Kolb",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB89",
+      "homeowner_name": "Roger L. Messman",
+      "owner_type": "Previous Owner",
+      "prev_balance": 354.0,
+      "billing": 0.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 354.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB89",
+      "homeowner_name": "Raw Equity Group LLC",
+      "owner_type": "Owner",
+      "prev_balance": 717.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 841.0,
+      "source_pages": [
+        54
+      ]
+    },
+    {
+      "unit_id": "TPB90",
+      "homeowner_name": "Kelly Burns",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": -114.0,
+      "adjustments": -10.0,
+      "prepaid": 0.0,
+      "ending_balance": -4.0,
+      "source_pages": [
+        54,
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB91",
+      "homeowner_name": "Jessica  Vespar",
+      "owner_type": "Owner",
+      "prev_balance": -114.0,
+      "billing": 124.0,
+      "receipts": -114.0,
+      "adjustments": -10.0,
+      "prepaid": 114.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB92",
+      "homeowner_name": "Mary Casey",
+      "owner_type": "Owner",
+      "prev_balance": -1284.0,
+      "billing": 1364.0,
+      "receipts": -1284.0,
+      "adjustments": -80.0,
+      "prepaid": 1284.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB93",
+      "homeowner_name": "John Hennessey",
+      "owner_type": "Owner",
+      "prev_balance": 152.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": -150.0,
+      "prepaid": 0.0,
+      "ending_balance": 2.0,
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB94",
+      "homeowner_name": "Ann Kenas",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 124.0,
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB95",
+      "homeowner_name": "Philip R. & Judy Laun",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 1364.0,
+      "receipts": -1364.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 0.0,
+      "source_pages": [
+        55
+      ]
+    },
+    {
+      "unit_id": "TPB96",
+      "homeowner_name": "Carolyn Jobe",
+      "owner_type": "Owner",
+      "prev_balance": 0.0,
+      "billing": 124.0,
+      "receipts": 0.0,
+      "adjustments": 0.0,
+      "prepaid": 0.0,
+      "ending_balance": 124.0,
+      "source_pages": [
+        55
+      ]
+    }
+  ]
 }
