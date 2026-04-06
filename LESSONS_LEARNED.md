@@ -679,4 +679,6 @@ When building the Data Warehouse UI, we originally used a standard HTML `<select
 
 ---
 
+See [FUTURE_IDEAS.md](./FUTURE_IDEAS.md) for productization, blog post topics, and portfolio hooks.
+
 *More lessons coming as we build Phase 4...*
